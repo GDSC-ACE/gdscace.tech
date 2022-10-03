@@ -1,3 +1,3 @@
 # Website
 
-This is a repository for official DSC DYPCOE website
+Welcome to the GDSC ACE website repository.
