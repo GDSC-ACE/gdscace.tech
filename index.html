@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#2F5BE7">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="src/images/icon.png" type="image/png">
+    <link rel="icon" href="./src/images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/owl.carousel.min.css">
     <link rel="stylesheet" href="src/css/bootstrap.min.css">
@@ -311,17 +311,22 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="feature-list-image"><img data-src="src\images\robo.png"
+                    <div class="feature-list-image"><img data-src="src/images/assets/technologies/robo.jpg"
                             class="img-fluid" alt="Robotic illustration of how many different things it can do"
-                            height="60%" width="90%"></div>
+                            height="30%" width="90%"></div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section-spacer">
+ 
+    <section id="hip" class="section-spacer bg-very__gray">
         <div class="container">
-            <div class="row flex-column-reverse flex-sm-row align-items-cengit ter">
-                <div class="col-sm-5 mr-auto">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <div class="feature-list-image"><img data-src="src/images/assets/technologies/arvr.jpg"
+                            class="img-fluid" alt="Illustration of cyber security features" width="90%"></div>
+                </div>
+                <div class="col-sm-5 ml-auto">
                     <div class="feature-list-wrapper">
                         <div class="content-header">
                             <h2 class="content-title">Augmented Reality</h2>
@@ -331,14 +336,10 @@
                                 class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="feature-list-image"><img data-src="src\images\robo.png"
-                            class="img-fluid" alt="Augmented Reality"
-                            height="60%" width="90%"></div>
-                </div>
             </div>
         </div>
     </section>
+
     <section id="workshops" class="section-spacer workshops-section bg-very__gray">
         <div class="container">
             <header class="section-header text-center">
@@ -356,14 +357,14 @@
                     <div class="row w-100">
                         <div class="col-md-4 col-12">
                             <div class="card event-card"><img class="card-img-top"
-                                    data-src="src\images\assets\events\thumbcompose.JPG" alt="Event two poster">
+                                    data-src="src\images\assets\events\alchemiagdsc.gif" alt="Event two poster">
                                 <div class="card-body">
                                     <div class="card-body">
-                                        <p class="tagging beginner float-right">Beginner</p>
-                                        <h5 class="card-title">Jetpack Compose Camp</h5>
+                                        <p class="tagging beginner float-right">Hackathon</p>
+                                        <h5 class="card-title">Alchemia Hacks 22 </h5>
                                         <br>
-                                        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-atharva-college-of-engineering-mumbai-presents-jetpack-compose-camp/"
-                                            class="button button-red float-right">Do RSVP Now !</a>
+                                        <a href="https://forms.gle/c698uBgXywu1g66i9"
+                                            class="button button-red float-right">Register Now ✨</a>
                                     </div>
                                 </div>
                             </div>
@@ -372,22 +373,22 @@
                     </div>
                 </div>
                 <div class="tab-pane" id="past20" role="tabpanel" aria-labelledby="past20">
-                    <!-- <div class="row w-100">
+                    <div class="row w-100">
                         <div class="col-md-4 col-12">
                             <div class="card event-card"><img class="card-img-top"
-                                    data-src="src/images/assets/events/intro-to-arvr.jpeg" alt="Event two poster">
+                                    data-src="src\images\assets\events\thumbcompose.JPG" alt="Event two poster">
                                 <div class="card-body">
                                     <div class="card-body">
                                         <p class="tagging beginner float-right">Beginner</p>
-                                        <h5 class="card-title">Introduction to AR/VR</h5>
+                                        <h5 class="card-title">Jetpack Compose Camp</h5>
                                         <br>
-                                        <a href="https://youtu.be/4bNHlJQ1FRU"
-                                            class="button button-red float-right">Watch Online</a>
+                                        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-atharva-college-of-engineering-mumbai-presents-jetpack-compose-camp/"
+                                            class="button button-red float-right">Check Out Here</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12">
+                        <!-- <div class="col-md-4 col-12">
                             <div class="card event-card"><img class="card-img-top"
                                     data-src="src/images/assets/events/intro-to-cloud.jpeg" alt="Event two poster">
                                 <div class="card-body">
@@ -448,8 +449,8 @@
                                         class="button button-red float-right">Watch Online</a>
                                 </div>
                             </div>
-                        </div>
-                    </div> -->
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -992,7 +993,7 @@
                                 <ul>
                                     <li class="list-unstyled"></li>
                                     <li><a href="https://console.firebase.google.com/" target="_blank"
-                                            rel="noreferrer">Firebase console</a></li>
+                                            rel="noreferrer">Firebase Console</a></li>
                                     <li><a href="https://console.cloud.google.com/" target="_blank"
                                             rel="noreferrer">Google Cloud Platform</a></li>
                                     <li><a href="https://console.actions.google.com/" target="_blank"
@@ -1066,16 +1067,6 @@
     <script src="src/js/vendors/owl.carousel.min.js"></script>
     <script src="src/js/vendors/hammer.js"></script>
     <script src="src/js/custom.js"></script>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.19.1/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
-
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
 </body>
 
 </html>
