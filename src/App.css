@@ -1,34 +1,7 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 .Prizes {
   background-color: #000914;
+  font-family: cursive;
+  text-align: center;
 }
 
 .prize-title {
@@ -37,115 +10,80 @@
    max-width: 150px;
    display: inline-block;
    color: white;
+   margin: 0;
 }
-
-/* .square {
-  width: 600px;
-  height: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-around;
-  align-content: center;
-  /* background-color: burlywood; */
-  /* margin-left: 650px; */
-  /* }  */
   
-  /* .orbit {
-    position: absolute;
-    right: 150px;
-    width: 650px;
-    height: 450px;
-    border: 1px solid #b11313; 
-    border-radius: 50%; 
-    transform: rotate(-50deg);
-    
-  } */
-
-  .square {
-    position: absolute;
-    right: 150px;
-    position: absolute;
-    right: 150px;
-    width: 550px;
-    height: 400px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    transform: rotate(-45deg);
-    border: 1px solid #242424; 
-    border-radius: 50%; 
+.square {
+  position: absolute;
+  right: 250px;
+  width: 550px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transform: rotate(-45deg);
+  border: 1px solid #242424; 
+  border-radius: 50%;
+  margin-top: 100px;
 }
 
 .prize-value {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 0;
-  padding-top: 0;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 20px;
+  position: relative;
+  transition: transform 0.3s ;
 }
 
-.planet1{
-  width: 150px;
-  height: 200px;
-  object-fit: contain;
-  /* padding: 20px 75px 0px 50px; */
+.prize-value:hover {
+  transform: scale(1.1);
 }
 
-.planet2{
-  width: 150px;
-  height: 200px;
+.rank { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    /* transform: rotate(45deg); */
+}
+
+.planet1, .planet2{
+  width: 200px;
+  height: 150px;
   object-fit: contain;
-  /* padding: 20px 35px; */
-  /* padding: 20px 50px 0px 75px; */
 }
 
 .planet3{
-  width: 150px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
   object-fit: contain;
-  padding-top: 50px;
-  /* padding: 100px 50px 0px 50px; */
-  
+  padding-top: 70px;
 }
-
-
-
 
 p {
   color: #FFE4A0;
-  font-size: 20px;
+  font-size: 25px;
   margin: 0px;
-  
 }
 
 .rock {
   width: 50px;
   height: 50px;
   object-fit: cover;
-  margin: 0px;
-  padding: 0;
 }
 
 span {
-  margin: 0;
-  padding: 0;
+  margin-left: -50px;
+  margin-top: -20px;
   display: flex;
-  width: 150px;
-  height: 0px;
+  width: 180px;
   align-items: center;
-  justify-content: center;
+  transform: rotate(45deg);
 }
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

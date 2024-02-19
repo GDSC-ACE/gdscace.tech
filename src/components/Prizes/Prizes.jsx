@@ -18,6 +18,7 @@ export default class Prizes extends Component {
           <div className="square">
               <div className="prize-value">
                 <img className="planet1" src={planet2} alt="planet1" />
+                <div className="rank">1st</div>
                 <span>
                   <img className="rock" src={rocks} alt="rock" />
                   <p> &#8377; 50,000</p>
@@ -26,6 +27,7 @@ export default class Prizes extends Component {
 
               <div className="prize-value">
                 <img className="planet2" src={planet3} alt="planet2" />
+                <div className="rank">2nd</div>
                 <span>
                   <img className="rock" src={rocks} alt="rock" />
                   <p> &#8377; 25,000</p>
@@ -34,6 +36,7 @@ export default class Prizes extends Component {
 
               <div className="prize-value">
                 <img className="planet3" src={planet1} alt="planet3" />
+                <div className="rank">3rd</div>
                 <span>
                   <img className="rock" src={rocks} alt="rock" />
                   <p> &#8377; 10,000</p>
