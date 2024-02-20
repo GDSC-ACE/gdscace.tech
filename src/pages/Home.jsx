@@ -11,10 +11,13 @@ import Faqs from "../components/home/Faqs";
 const HomePage = () => {
   return (
     <section>
+      {/* Sahil & Hrushi */}
       <Hero />
+      {/* Sachin and Dhruv P */}
       <About />
       <Domains />
       <Prizes />
+      {/* Nimesh, Shamit and Dhruv B */}
       <Timeline />
       <Sponsors />
       <Faqs />

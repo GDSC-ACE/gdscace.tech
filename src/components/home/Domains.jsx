@@ -1,5 +1,7 @@
 import React from "react";
+import DomainCard from "./partials/DomainCard";
 
+// tailwindcss - group hover
 const Domains = () => {
   return (
     <section className="min-h-[100vh] py-24">
@@ -16,61 +18,16 @@ const Domains = () => {
         </div>
       </div>
       <div className="flex flex-row justify-evenly flex-wrap">
-        <div className="border-stone-200 border-2 w-[90%] h-[50%] lg:w-64 lg:h-64 rounded-lg flex flex-col m-2">
-          <h2 className="text-white text-4xl text-center mb-10 mt-5">
-            AI / ML
-          </h2>
-          <img
-            src={"../../assets/ufo.png"}
-            className="h-12 sm:h-20 lg:h-24 flex justify-center "
-            alt="AIML"
-          />
-        </div>
+        <DomainCard domainName="AI / ML" imagePath="/assets/ufo.png" />
 
-        <div className="border-stone-200 border-2 h-64 w-64 rounded-lg flex flex-col">
-          <h2 className="text-white text-4xl text-center mb-10 mt-5">
-            Blockchain
-          </h2>
-          <img
-            src={"/assets/ufo.png"}
-            className="h-12 sm:h-20 lg:h-24 flex justify-center "
-            alt="AIML"
-          />
-        </div>
+        <DomainCard domainName="Blockchain" imagePath="/assets/ufo.png" />
 
-        <div className="border-stone-200 border-2 h-64 w-64 rounded-lg flex flex-col">
-          <h2 className="text-white text-4xl text-center mb-10 mt-5">
-            Web/App
-          </h2>
-          <img
-            src={"/assets/ufo.png"}
-            className="h-12 sm:h-20 lg:h-24 flex justify-center "
-            alt="AIML"
-          />
-        </div>
-      </div>
+        <DomainCard domainName="Web/App" imagePath="/assets/ufo.png" />
 
-      <div className="flex flex-row justify-evenly mt-[100px] mb-20">
-        <div className="border-stone-200 border-2 h-64 w-64 rounded-lg flex flex-col">
-          <h2 className="text-white text-4xl text-center mb-10 mt-5">
-            Social Causes
-          </h2>
-          <img
-            src={"/assets/ufo.png"}
-            className="h-12 sm:h-20 lg:h-24 flex justify-center "
-            alt="AIML"
-          />
-        </div>
+        <div className="flex flex-row justify-evenly mt-[100px] mb-20">
+          <DomainCard domainName="Social Causes" imagePath="/assets/ufo.png" />
 
-        <div className="border-stone-200 border-2 h-64 w-64 rounded-lg flex flex-col">
-          <h2 className="text-white text-4xl text-center mb-10 mt-5">
-            CyberSecurity
-          </h2>
-          <img
-            src={"/assets/ufo.png"}
-            className="h-12 sm:h-20 lg:h-24 flex justify-center "
-            alt="AIML"
-          />
+          <DomainCard domainName="CyberSecurity" imagePath="/assets/ufo.png" />
         </div>
       </div>
     </section>

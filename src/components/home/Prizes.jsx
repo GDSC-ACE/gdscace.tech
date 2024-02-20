@@ -5,7 +5,9 @@ export default class Prizes extends Component {
   render() {
     return (
       <section className="min-h-[100svh] flex flex-col justify-center gap-y-20 items-center">
-        <h2 className="prize-title">Prizes</h2>
+        <h2 className="font-serif text-4xl max-w-[150px] inline-block text-white">
+          Prizes
+        </h2>
 
         <div className="square">
           <div className="prize-value">
