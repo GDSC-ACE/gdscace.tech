@@ -9,12 +9,9 @@ import rocks from "./Assets/rocks.png";
 export default class Prizes extends Component {
   render() {
     return (
-      <section className="Prizes">
-        <h2 className="prize-title">Prizes</h2>
-
-        <div className="orbit">
-          
-        </div>
+      <section className="Prizes font-cursive text-center text-3xl mt-44">
+        <h2 className="prize-title text-white text-2x1 max-w-150px inline-block">Prizes</h2>
+        
           <div className="square">
               <div className="prize-value">
                 <img className="planet1" src={planet2} alt="planet1" />

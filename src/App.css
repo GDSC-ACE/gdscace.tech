@@ -1,10 +1,10 @@
 .Prizes {
-  background-color: #000914;
-  font-family: cursive;
-  text-align: center;
+  /* background-color: #000914; */
+  /* font-family: cursive;
+  text-align: center; */
 }
 
-.prize-title {
+/* .prize-title {
    font-family: cursive;
    font-size: 32px;
    max-width: 150px;
@@ -12,7 +12,7 @@
    color: white;
    margin: 0;
 }
-  
+   */
 .square {
   position: absolute;
   right: 250px;
@@ -61,7 +61,6 @@
   width: 200px;
   height: 150px;
   object-fit: contain;
-  padding-top: 70px;
 }
 
 p {
