@@ -3,9 +3,9 @@ export default class Hero extends Component {
   render() {
     return (
       <section className="relative min-h-[86svh] flex flex-col overflow-hidden">
-        <div className="flex flex-1 justify-evenly items-center">
+        <div className="flex flex-1 justify-evenly items-center mr-[10px] border-yellow-500 border-r-2">
           <section className="text-white flex flex-col items-center gap-[40px] sm:max-w-[350px] justify-self-center md:justify-self-end">
-            <div className="flex flex-col items-center gap-[25px]">
+            <div className="flex flex-col items-center gap-[25px] relative">
               <div className="font-bold font-sans text-6xl md:text-7xl">
                 <h1 className="glow text-center">
                   ACE
@@ -41,7 +41,13 @@ export default class Hero extends Component {
               className="absolute bottom-[-30%] z-[0]"
             />
           </section>
+          <div className=" absolute rotate-[-90deg] right-[-4%] top-[20%]">
+            <p>16th Mar 2024</p>
+          </div>
         </div>
+        <section className=" absolute bottom-[-8%]">
+          <img src="/assets/bottom_tree.png" alt="bottom_tree_img"/>
+        </section>
       </section>
     );
   }
