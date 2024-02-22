@@ -1,8 +1,5 @@
-//Raghav
-import React, { Component } from "react";
+const FAQs = () => {
+  return <section>Faqs (Raghav)</section>;
+};
 
-export default class Faqs extends Component {
-  render() {
-    return <section>Faqs (Raghav)</section>;
-  }
-}
+export default FAQs;
