@@ -46,7 +46,7 @@ const Domains = () => {
               alt="UFO"
             />
           </div>
-          <DomainCard domainName="AI / ML" imagePath="/assets/ufo.png" />
+          <DomainCard domainName="AI / ML" imagePath="/assets/domain/AI.svg" />
         </div>
 
         <div className="bg-custom-black group rounded-lg p-6 shadow-md transition duration-300 ease-in-out hover:shadow-lg">
@@ -63,7 +63,7 @@ const Domains = () => {
               alt="UFO"
             />
           </div>
-          <DomainCard domainName="Blockchain" imagePath="/assets/ufo.png" />
+          <DomainCard domainName="Blockchain" imagePath="/assets/domain/blockchain.svg" />
         </div>
 
         <div className="bg-custom-black group rounded-lg p-6 shadow-md transition duration-300 ease-in-out hover:shadow-lg">
@@ -80,7 +80,7 @@ const Domains = () => {
               alt="UFO"
             />
           </div>
-          <DomainCard domainName="Web/App" imagePath="/assets/ufo.png" />
+          <DomainCard domainName="Web/App" imagePath="/assets/domain/web.svg" />
         </div>
 
         <div className="mb-20 mt-[160px] flex flex-row justify-between">
@@ -100,7 +100,7 @@ const Domains = () => {
             </div>
             <DomainCard
               domainName="Social Causes"
-              imagePath="/assets/ufo.png"
+              imagePath="/assets/domain/handshake.svg"
             />
           </div>
 
@@ -120,7 +120,7 @@ const Domains = () => {
             </div>
             <DomainCard
               domainName="CyberSecurity"
-              imagePath="/assets/ufo.png"
+              imagePath="/assets/domain/padlock.svg"
             />
           </div>
         </div>
