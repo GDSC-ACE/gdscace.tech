@@ -1,32 +1,27 @@
-//Akshata
-import React, { Component } from 'react'
-import '../../styles/global.css';
-import "./Sidebar.css"
+import React from "react";
+// import { useLocation } from "react-router-dom";
 
-export default class Sidebar extends Component {
-  render() {
-    return (
-
-      <div className="Navbar sidebar-content h-full w-1/4 fixed  ">
-
-        
-        <nav className="mt-10 ml-20">
-          <ul className="list-none ">
-            <li className="py-2 px-4 mb-5 mt-40 text-3xl ">Home</li>
-            <li className="py-2 px-4 mb-5 text-3xl ">About Us</li>
-            <li className="py-2 px-4 mb-5 text-3xl">Domain</li>
-            <li className="py-2 px-4 mb-5 text-3xl ">Prizes</li>
-            <li className="py-2 px-4 mb-5 text-3xl">Timeline</li>
-            <li className="py-2 px-4 mb-5 text-3xl">Sponsors</li>
-            <li className="py-2 px-2 mb-5 text-3xl">FAQ's</li>
-            <li className="py-2 px-4 mb-5 text-3xl">Contact Us</li>
-
-
-
-          </ul>
-        </nav>
+// useState, useEffect, useRouter
+const Sidebar = () => {
+  // const locaiton = useLocation();
+  return (
+    <aside className="w-[25svh] h-[80svh] fixed top-40">
+       <div className="border-l-8 border-yellow-500 max-w-[350px] pl-3">
+      <nav className="h-full">
+        <ul className="text-black list-none pl-12 flex flex-col justify-center h-full gap-y-5 font-semibold lg:font-bold text-md lg:text-2xl">
+          <li>Home</li>
+          <li>About</li>
+          <li>Domains</li>
+          <li>Prizes</li>
+          <li>Timeline</li>
+          <li>Sponsors</li>
+          <li>FAQs</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
       </div>
+    </aside>
+  );
+};
 
-    )
-  }
-}
+export default Sidebar
