@@ -1,0 +1,88 @@
+.Prizes {
+  /* background-color: #000914; */
+  /* font-family: cursive;
+  text-align: center; */
+}
+
+/* .prize-title {
+   font-family: cursive;
+   font-size: 32px;
+   max-width: 150px;
+   display: inline-block;
+   color: white;
+   margin: 0;
+}
+   */
+.square {
+  position: absolute;
+  right: 250px;
+  width: 550px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transform: rotate(-45deg);
+  border: 1px solid #242424; 
+  border-radius: 50%;
+  margin-top: 100px;
+}
+
+.prize-value {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ;
+}
+
+.prize-value:hover {
+  transform: scale(1.1);
+}
+
+.rank { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    /* transform: rotate(45deg); */
+}
+
+.planet1, .planet2{
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.planet3{
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+p {
+  color: #FFE4A0;
+  font-size: 25px;
+  margin: 0px;
+}
+
+.rock {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+span {
+  margin-left: -50px;
+  margin-top: -20px;
+  display: flex;
+  width: 180px;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+
+
