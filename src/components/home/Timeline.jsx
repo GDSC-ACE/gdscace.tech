@@ -1,7 +1,5 @@
-import React, { Component } from "react";
+const Timeline = () => {
+  return <section>Timeline</section>;
+};
 
-export default class Timeline extends Component {
-  render() {
-    return <section>Timeline</section>;
-  }
-}
+export default Timeline;
