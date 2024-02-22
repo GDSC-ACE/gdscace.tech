@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import DomainCard from "./partials/DomainCard";
 import { gsap } from "gsap";
 
+
+
 // tailwindcss - group hover
 const Domains = () => {
   const ufoRef = useRef(null);
@@ -47,7 +49,7 @@ const Domains = () => {
               alt="UFO"
             />
           </div>
-          <DomainCard domainName="AI / ML" imagePath="/assets/ufo.png" />
+          <DomainCard domainName="AI / ML" imagePath="/assets/domain/AI.svg" />
         </div>
 
         <div className="group bg-custom-black rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300 ease-in-out">
@@ -64,7 +66,7 @@ const Domains = () => {
               alt="UFO"
             />
           </div>
-          <DomainCard domainName="Blockchain" imagePath="/assets/ufo.png" />
+          <DomainCard domainName="Blockchain" imagePath="/assets/domain/blockchain.svg" />
         </div>
 
         <div className="group bg-custom-black rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300 ease-in-out">
@@ -81,7 +83,7 @@ const Domains = () => {
               alt="UFO"
             />
           </div>
-          <DomainCard domainName="Web/App" imagePath="/assets/ufo.png" />
+          <DomainCard domainName="Web/App" imagePath="/assets/domain/web.svg" />
         </div>
 
         <div className="flex flex-row justify-between mt-[160px] mb-20">
@@ -101,7 +103,7 @@ const Domains = () => {
             </div>
             <DomainCard
               domainName="Social Causes"
-              imagePath="/assets/ufo.png"
+              imagePath="/assets/domain/handshake.svg"
             />
           </div>
 
@@ -121,7 +123,7 @@ const Domains = () => {
             </div>
             <DomainCard
               domainName="CyberSecurity"
-              imagePath="/assets/ufo.png"
+              imagePath="/assets/domain/padlock.svg"
             />
           </div>
         </div>
