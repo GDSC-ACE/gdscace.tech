@@ -15,28 +15,34 @@ const Sponsors = () => {
       <SponsorCard
         sponsorName="Tinder"
         imagePath="/assets/sponsor/sponsors.svg"
+        ringImagePath="/assets/sponsor/ring.jpg"
       />
       <SponsorCard
         sponsorName="Sponsor2"
         imagePath="/assets/sponsor/sponsors.svg"
+        ringImagePath="/assets/sponsor/ring.jpg"
       />
       <SponsorCard
         sponsorName="Sponsor3"
         imagePath="/assets/sponsor/sponsors.svg"
+        ringImagePath="/assets/sponsor/ring.jpg"
       />
     </div>
     <div className="flex items-center justify-center gap-5 md:gap-12 lg:gap-20">
       <SponsorCard
         sponsorName="Sponsor4"
         imagePath="/assets/sponsor/sponsors.svg"
+        ringImagePath="/assets/sponsor/ring.jpg"
       />
       <SponsorCard
         sponsorName="Sponsor5"
         imagePath="/assets/sponsor/sponsors.svg"
+        ringImagePath="/assets/sponsor/ring.jpg"
       />
        <SponsorCard
         sponsorName="Sponsor6"
         imagePath="/assets/sponsor/sponsors.svg"
+        ringImagePath="/assets/sponsor/ring.jpg"
       />
     </div>
   </section>
