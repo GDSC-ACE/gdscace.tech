@@ -1,7 +1,5 @@
-import React, { Component } from "react";
+const Sponsors = () => {
+  return <section id="sponsors">Sponsers</section>;
+};
 
-export default class Sponsers extends Component {
-  render() {
-    return <section>Sponsers</section>;
-  }
-}
+export default Sponsors;

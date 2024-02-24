@@ -1,52 +1,37 @@
-//Dhruv P
-import React, { Component } from "react";
+import PrizeCard from "./partials/PlanetCard";
 
-export default class Prizes extends Component {
-  render() {
-    return (
-      <section className="min-h-[100svh] flex flex-col justify-center gap-y-20 items-center">
-        <h2 className="font-serif text-4xl max-w-[150px] inline-block text-white">
-          Prizes
-        </h2>
+const Prizes = () => {
+  return (
+    <section
+      id="prizes"
+      className="relative mt-44 h-screen overflow-hidden text-center text-3xl"
+    >
+      <h2 className="mb-10 inline-block max-w-xs text-2xl text-white">
+        Prizes
+      </h2>
 
-        <div className="square">
-          <div className="prize-value">
-            <img
-              className="planet1"
-              src={"/assets/planet3.png"}
-              alt="planet1"
-            />
-            <span>
-              <img className="rocks" src={"/assets/rocks.png"} alt="rocks" />
-              <p> &#8377; 50,000</p>
-            </span>
-          </div>
+      <div className="relative mx-auto flex w-full translate-y-1/4 rotate-45 transform items-center justify-center rounded-full border border-solid border-gray-900 md:h-1/2 lg:w-1/2">
+        <PrizeCard
+          imgSrc={"/assets/prizes/planet2.png"}
+          prizeAmount={50000}
+          altText="1st"
+          className="left-0 top-0 -translate-x-1/2 translate-y-1/2"
+        />
+        <PrizeCard
+          imgSrc={"/assets/prizes/planet3.png"}
+          prizeAmount={25000}
+          altText="2nd"
+          className="right-1/4 top-1/4 -translate-x-1/2 translate-y-1/2"
+        />
+        <PrizeCard
+          imgSrc={"/assets/prizes/planet1.png"}
+          prizeAmount={10000}
+          altText="3rd"
+          className="bottom-1/4 left-1/4 -translate-y-1/2 translate-x-1/2"
+        />
+      </div>
+    </section>
+  );
+};
 
-          <div className="prize-value">
-            <img
-              className="planet2"
-              src={"/assets/planet2.png"}
-              alt="planet2"
-            />
-            <span>
-              <img className="rocks" src={"/assets/rocks.png"} alt="rocks" />
-              <p> &#8377; 25,000</p>
-            </span>
-          </div>
-
-          <div className="prize-value">
-            <img
-              className="planet3"
-              src={"/assets/planet1.png"}
-              alt="planet3"
-            />
-            <span>
-              <img className="rocks" src={"/assets/rocks.png"} alt="rocks" />
-              <p> &#8377; 10,000</p>
-            </span>
-          </div>
-        </div>
-      </section>
-    );
-  }
-}
+export default Prizes;

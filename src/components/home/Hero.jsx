@@ -1,48 +1,61 @@
-import React, { Component } from "react";
-export default class Hero extends Component {
-  render() {
-    return (
-      <section className="relative min-h-[86svh] flex flex-col overflow-hidden">
-        <div className="flex flex-1 justify-evenly items-center">
-          <section className="text-white flex flex-col items-center gap-[40px] sm:max-w-[350px] justify-self-center md:justify-self-end">
-            <div className="flex flex-col items-center gap-[25px]">
-              <div className="font-bold font-sans text-6xl md:text-7xl">
-                <h1 className="glow text-center">
-                  ACE
-                  <br />
-                  HACKS
-                </h1>
-              </div>
-              <div className="border-l-2 border-yellow-500 max-w-[350px] pl-3">
-                <p className="text-justify">
-                  Presenting, one of the biggest 24-hour Offline Hackathon of
-                  ACE
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2 text-2xl font-bold rounded-md border-2">
-              <button className="bg-transparent p-[5px] min-w-[150px]">
-                DEVFOLIO
-              </button>
-              <button className=" bg-yellow-500/75 p-[5px] rounded-r-md min-w-[150px]">
-                REGISTER NOW
-              </button>
-            </div>
-          </section>
-          <section className="flex justify-center">
+const Hero = () => {
+  return (
+    <section className="relative mr-3 flex min-h-[84svh] items-center justify-between overflow-hidden border-r-2 border-yellow-500">
+      <p className="text-md absolute -right-8 top-[40%] rotate-[-90deg] bg-black font-semibold text-white lg:text-lg">
+        16th Mar 2024
+      </p>
+
+      <main className="flex h-full w-full -translate-y-[10svh] items-center justify-between gap-10 pl-20 pr-28">
+        <article className="flex flex-col gap-y-6">
+          <figure
+            aria-label="page-title"
+            className="text-6xl font-bold md:text-7xl"
+          >
             <img
-              src="/assets/astronaut.png"
-              alt="astronaut"
-              className="max-h-[400px] animate-float z-10 relative"
+              src="/assets/title.svg"
+              alt="Title"
+              className="h-auto md:w-48 lg:w-96"
             />
-            <img
-              src="/assets/moon_big.svg"
-              alt="moon_big"
-              className="absolute bottom-[-30%] z-[0]"
-            />
-          </section>
+          </figure>
+          <h2 className="text-md ml-12 border-l-2 border-yellow-500 pl-3 text-justify text-white md:text-lg lg:text-xl">
+            Presenting, one of the biggest
+            <br />
+            24-hour Offline Hackathon of ACE
+          </h2>
+        </article>
+        <figure>
+          <img
+            src="/assets/astronaut.png"
+            alt="astronaut"
+            className="animate-float relative z-10 max-h-[180px] md:max-h-[280px] lg:max-h-[457px]"
+          />
+        </figure>
+      </main>
+
+      <footer>
+        <figure>
+          <img
+            src="/assets/moon_big.svg"
+            alt="moon_big"
+            className="absolute -right-6 bottom-0 w-1/2"
+          />
+        </figure>
+
+        <figure className="absolute -bottom-4 right-0">
+          <img src="/assets/bottom_tree.png" alt="bottom_tree_img" />
+        </figure>
+
+        <div className="absolute bottom-20 left-[50%] flex h-[10svh] w-full -translate-x-[50%] px-20 text-2xl font-black text-white md:text-3xl lg:text-5xl">
+          <button className="h-full w-full cursor-pointer rounded-l-md border-y-2 border-l-2 bg-transparent">
+            DEVFOLIO
+          </button>
+          <button className="h-full w-full cursor-pointer rounded-r-md border-y-2 border-r-2 bg-yellow-500/75">
+            REGISTER NOW
+          </button>
         </div>
-      </section>
-    );
-  }
-}
+      </footer>
+    </section>
+  );
+};
+
+export default Hero;
