@@ -49,3 +49,10 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
+
+.custom-hover-effect:hover {
+  transform: scale(1.5); 
+}
+.custom-hover-effect {
+  transition: transform 0.2s ease; 
+}
