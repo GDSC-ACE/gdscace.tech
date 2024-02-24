@@ -7,6 +7,7 @@ import Prizes from "../components/home/Prizes";
 import Timeline from "../components/home/Timeline";
 import Sponsors from "../components/home/Sponsors";
 import Faqs from "../components/home/Faqs";
+import Footer from "../components/home/Footer";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       <Timeline />
       <Sponsors />
       <Faqs />
+      <Footer />
     </section>
   );
 };
