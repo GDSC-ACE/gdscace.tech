@@ -1,6 +1,5 @@
-
 const Sponsors = () => {
-    return <section>Sponsers</section>;
-}
+  return <section id="sponsors">Sponsers</section>;
+};
 
 export default Sponsors;

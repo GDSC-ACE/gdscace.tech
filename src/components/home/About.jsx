@@ -1,10 +1,13 @@
 const About = () => {
   return (
-    <section className="flex min-h-[100svh] flex-col items-center justify-center">
+    <section
+      id="about"
+      className="mx-auto flex min-h-[100svh] max-w-3xl flex-col items-center justify-center lg:max-w-5xl"
+    >
       <div className="mb-11 flex flex-row items-center justify-center">
         <h1 className="mb-9 text-3xl font-bold text-red-50">About us</h1>
       </div>
-      <div className="">
+      <div className="text-justify">
         <p className="mb-5 text-center text-3xl text-white">
           Presenting ACE IEEE Techithon's Hack Mania, one of the biggest 24-Hour
           Offline Hackathon of ACE.
