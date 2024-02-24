@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <section className="flex min-h-[100svh] flex-col overflow-hidden">
+    <section id="contacts" className="flex min-h-[100svh] flex-col overflow-hidden">
   <div className="flex flex-1 flex-row">
     <div className="flex flex-1 flex-col items-center justify-center">
       <div className="mb-11 flex flex-row items-center justify-center">

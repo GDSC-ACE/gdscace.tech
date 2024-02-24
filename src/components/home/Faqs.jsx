@@ -47,22 +47,22 @@ const FAQs = () => {
         }
 
         return faq;
-      })
+      }),
     );
   };
 
   return (
-    <div className={styles.section}>
+    <section id={"faqs"} className={styles.section}>
       <div className={styles.justify}>
         <div className={styles.heading}>FAQ's</div>
-        </div>
+      </div>
 
       <div className={"faqs"}>
         {faqs.map((faq, index) => (
           <Faq faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
