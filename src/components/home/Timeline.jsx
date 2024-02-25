@@ -9,10 +9,14 @@ gsap.registerPlugin(Draggable);
 
 const Timeline = () => {
   const wheelRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     // GSAP animation logic
     const wheel = wheelRef.current;
+
+    gsap.set(imageRef.current, { rotation: '-60' });
+
 
     const style = window.getComputedStyle(wheel);
     const border = parseInt(style.getPropertyValue("border-width"));
@@ -43,6 +47,8 @@ const Timeline = () => {
 
     let titleIndex = 0;
     let lastTitleUpdateRotation = -20;
+    let lastRotation = 0;
+
 
     Draggable.create(wheel, {
       type: "rotation",
@@ -50,12 +56,21 @@ const Timeline = () => {
       bounds: { minRotation: 0, maxRotation: -180 },
       minimumMovement: 10,
       onDrag: function () {
+        rotateImageBasedOnDragDirection(this.rotation);
         updateTitleOnRotation(this.endRotation);
       },
       onThrowUpdate: function () {
+        rotateImageBasedOnDragDirection(this.rotation);
         updateTitleOnRotation(this.endRotation);
       },
     });
+
+    function rotateImageBasedOnDragDirection(currentRotation) {
+      const rotationChange = currentRotation - lastRotation;
+      const rotationDirection = rotationChange / Math.abs(rotationChange);
+      gsap.to(imageRef.current, { rotation: `+=${2 * rotationDirection}`, duration: 0.5 });
+      lastRotation = currentRotation;
+    }
 
     function createBox(i) {
       const num = i + 1;
@@ -119,6 +134,7 @@ const Timeline = () => {
         className="absolute left-full top-1/2 h-full -translate-y-1/2 rounded-full"
       >
         <img
+          ref={imageRef}
           className="astro h-24 w-24 border-none"
           src="/assets/timeline/rocket.png"
           alt="Rocket Scroll"
