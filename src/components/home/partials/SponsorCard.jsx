@@ -1,6 +1,6 @@
 import React from "react";
 
-const SponsorCard = ({ sponsorName, imagePath, ringImagePath }) => {
+const SponsorCard = ({ sponsorName, imagePath }) => {
   return (
     <div className="domain-card relative m-2 flex flex-col items-center">
       <figure className="relative z-10 flex h-32 w-32 items-center justify-center overflow-hidden lg:h-60 lg:w-60">
@@ -16,7 +16,7 @@ const SponsorCard = ({ sponsorName, imagePath, ringImagePath }) => {
           alt="Circular ring"
         />
       </figure>
-      <h2 className="mb-4 mt-4 text-center text-3xl text-white">
+      <h2 className="mb-4 mt-4 text-center text-base text-white md:text-lg lg:text-xl">
         {sponsorName}
       </h2>
     </div>

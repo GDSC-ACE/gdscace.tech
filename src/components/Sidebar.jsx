@@ -76,7 +76,7 @@ const Sidebar = () => {
             />
           </div>
         </div>
-        <ul className="text-md flex h-full list-none flex-col justify-center gap-y-8 pl-1 font-semibold text-white md:pl-2 lg:pl-3 lg:text-2xl lg:font-semibold">
+        <ul className="text-md flex h-full list-none flex-col justify-center gap-y-16 pl-1  font-semibold text-white md:pl-2 lg:gap-y-8 lg:pl-3 lg:text-2xl lg:font-semibold">
           {items.map((item, index) => (
             <li
               key={item.name}
@@ -89,9 +89,19 @@ const Sidebar = () => {
               }
             >
               {window.innerWidth < 1024 ? (
-                <a href={`#${item.name.toLowerCase()}`}>{item.icon}</a>
+                <a
+                  href={`#${item.name.toLowerCase()}`}
+                  className="text-xs md:text-sm lg:text-base"
+                >
+                  {item.icon}
+                </a>
               ) : (
-                <a href={`#${item.name.toLowerCase()}`}>{item.name}</a>
+                <a
+                  href={`#${item.name.toLowerCase()}`}
+                  className="text-xs md:text-sm lg:text-base"
+                >
+                  {item.name}
+                </a>
               )}
             </li>
           ))}

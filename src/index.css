@@ -66,12 +66,12 @@ body {
 
 @media (max-width: 640px) {
   html {
-    font-size: 70%;
+    font-size: 80%;
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 50%;
+    font-size: 70%;
   }
 }

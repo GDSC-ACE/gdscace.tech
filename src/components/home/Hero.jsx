@@ -47,7 +47,7 @@ const Hero = () => {
           <img src="/assets/bottom_tree.png" alt="bottom_tree_img" />
         </figure>
 
-        <div className="absolute bottom-20 left-[50%] flex h-[6svh] w-full -translate-x-[50%] px-20 text-2xl font-black text-white md:text-3xl lg:h-[10svh] lg:text-5xl">
+        <div className="absolute bottom-20 left-[50%] flex h-[6svh] w-full -translate-x-[50%] px-10 text-xl font-black text-white md:text-3xl lg:h-[10svh] lg:px-20 lg:text-5xl">
           <button className="h-full w-full cursor-pointer rounded-l-md border-y-2 border-l-2 bg-transparent">
             DEVFOLIO
           </button>

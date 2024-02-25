@@ -15,8 +15,7 @@ const Timeline = () => {
     // GSAP animation logic
     const wheel = wheelRef.current;
 
-    gsap.set(imageRef.current, { rotation: '-60' });
-
+    gsap.set(imageRef.current, { rotation: "-60" });
 
     const style = window.getComputedStyle(wheel);
     const border = parseInt(style.getPropertyValue("border-width"));
@@ -49,7 +48,6 @@ const Timeline = () => {
     let lastTitleUpdateRotation = -20;
     let lastRotation = 0;
 
-
     Draggable.create(wheel, {
       type: "rotation",
       throwProps: true,
@@ -68,7 +66,10 @@ const Timeline = () => {
     function rotateImageBasedOnDragDirection(currentRotation) {
       const rotationChange = currentRotation - lastRotation;
       const rotationDirection = rotationChange / Math.abs(rotationChange);
-      gsap.to(imageRef.current, { rotation: `+=${2 * rotationDirection}`, duration: 0.5 });
+      gsap.to(imageRef.current, {
+        rotation: `+=${2 * rotationDirection}`,
+        duration: 0.5,
+      });
       lastRotation = currentRotation;
     }
 
@@ -110,32 +111,45 @@ const Timeline = () => {
   return (
     <section
       id="timeline"
-      className="home-section relative flex h-screen flex-col items-center overflow-hidden"
+      className="home-section relative flex h-[60svh] flex-col items-center overflow-hidden lg:h-screen"
     >
       <h3 className="inline-block max-w-xs pt-10 text-2xl text-white">
         TIMELINE
       </h3>
       <p
         id="title"
-        className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white"
+        className="absolute inset-0 z-40 flex items-center justify-center text-4xl font-bold text-white"
       >
         Registration
       </p>
-
       <img
         src="/assets/timeline/ellipse.png"
-        alt="Ellipse"
-        className="absolute right-0 top-1/2 h-[400px] -translate-y-1/2 transform md:h-[600px]"
+        alt="Orbit Curve"
+        className="absolute right-0 top-1/2 h-[350px] -translate-y-1/2 transform md:h-[600px]"
       />
-
+      <img
+        src="/assets/timeline/celestial.png"
+        alt="Star"
+        className="absolute left-0 top-0 scale-50"
+      />
+      <img
+        src="/assets/timeline/celestial2.png"
+        alt="Star"
+        className="absolute right-1/3 top-1/4 scale-50"
+      />
+      <img
+        src="/assets/timeline/celestial3.png"
+        alt="Star"
+        className="absolute bottom-0 left-1/3 scale-50"
+      />
       <div
         id="wheel"
         ref={wheelRef}
-        className="absolute left-full top-1/2 h-full -translate-y-1/2 rounded-full"
+        className="absolute left-full top-1/2 z-50 h-full -translate-y-1/2 rounded-full"
       >
         <img
           ref={imageRef}
-          className="astro h-24 w-24 border-none"
+          className="astro h-auto w-16 border-none lg:w-24"
           src="/assets/timeline/rocket.png"
           alt="Rocket Scroll"
         />

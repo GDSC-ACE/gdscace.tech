@@ -15,7 +15,7 @@ const FaqTile = ({ faq, index, toggleFAQ }) => {
         <div className="faq-number">{index + 1 + "."}</div>
         <div className="faq-question">{faq.question}</div>
       </div>
-      <div className="faq-arrow"></div>
+      <div className="faq-arrow hidden lg:block"></div>
       <div className="faq-answer">{faq.answer}</div>
     </section>
   );
@@ -32,7 +32,7 @@ const FAQs = () => {
     {
       question: "What if I have never been in a hackathon before?",
       answer:
-        "Hackmania aims to give beginners a headstart by providing them mentors who are from the industry to guide them. So that they can learn while brainstorming ideas. We've called for mentors👨🏻‍🏫 from Industry to help you and also judge your projects . So, first timers don't have to worry as their lack of experience won't be an issue in their road to victory . Plus, there is always a first time for everything ! We promise you a fun and fruitful experience.",
+        "Hackmania aims to give beginners a headstart by providing them mentors who are from the industry to guide them. So that they can learn while brainstorming ideas. We've called for mentors 👨🏻‍🏫 from Industry to help you and also judge your projects . So, first timers don't have to worry as their lack of experience won't be an issue in their road to victory . Plus, there is always a first time for everything ! We promise you a fun and fruitful experience.",
       open: false,
     },
     {

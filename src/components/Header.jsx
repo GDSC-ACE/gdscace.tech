@@ -6,12 +6,12 @@ const Header = () => {
       <img
         src="/assets/logo.svg"
         alt="logo"
-        className="h-auto w-1/4 lg:w-40 xl:w-48"
+        className="h-auto w-1/3 lg:w-40 xl:w-48"
       />
       <img
         src="/assets/GDSC_ACE.png"
         alt="GDSC_ACE"
-        className="h-auto w-1/4 lg:w-40 xl:w-48"
+        className="h-auto w-1/3 lg:w-40 xl:w-48"
       />
     </header>
   );

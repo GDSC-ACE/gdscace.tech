@@ -53,7 +53,7 @@ const Domains = () => {
       cardRect.left -
       sectionRect.left -
       ufoRef.current.offsetWidth -
-      ufoRect.width / 2;
+      ufoRect.width;
     const y = cardRect.top - sectionRect.top - ufoRef.current.offsetHeight;
 
     gsap.to(ufoRef.current, {
@@ -80,7 +80,7 @@ const Domains = () => {
   return (
     <section
       id="domains"
-      className="home-section no-scrollbar relative grid min-h-[50svh] place-items-center space-y-4 overflow-hidden lg:space-y-8"
+      className="home-section no-scrollbar relative grid min-h-[30svh] place-items-center space-y-4 overflow-hidden md:min-h-[50svh] lg:space-y-8 lg:pt-20"
       ref={sectionRef}
     >
       <h3 className="mb-9 text-center text-3xl font-bold text-red-50">

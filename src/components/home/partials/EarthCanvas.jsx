@@ -40,9 +40,9 @@ function Timeline() {
   return (
     <div
       ref={chartRef}
-      className="pointer-events-none absolute right-0 top-1/2 h-[350px] w-full -translate-y-1/2 translate-x-1/2 transform cursor-default bg-transparent md:h-[550px] xl:h-auto xl:flex-1"
+      className="pointer-events-none absolute right-0 top-1/2 h-[300px] w-full -translate-y-1/2 translate-x-1/2 transform cursor-default bg-transparent md:h-[550px] xl:h-auto xl:flex-1"
       style={{
-        height: window.innerWidth > 768 ? "550px" : "350px",
+        height: window.innerWidth > 768 ? "550px" : "300px",
       }}
     ></div>
   );

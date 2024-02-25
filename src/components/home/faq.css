@@ -106,7 +106,6 @@
   right: 0;
   transform: translateY(-50%);
   transition: all 0.2s ease;
-
 }
 
 /* Media query for medium screens (tablets) */
@@ -159,6 +158,14 @@
 
     height: 15px;
 
+  }
+
+  .faqs .faq .faq-question::after {
+    content: "";
+  }
+
+  .faqs .faq.open .faq-question::after {
+    content: "";
   }
 }
 
