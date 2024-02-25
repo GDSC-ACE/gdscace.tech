@@ -8,7 +8,7 @@ const HomePageLayout = () => {
     <section className="bg-black">
       <Header />
       <Sidebar />
-      <main className="pl-[20svh]">
+      <main className="pl-[10svh] lg:pl-[20svh]">
         <Outlet />
       </main>
     </section>

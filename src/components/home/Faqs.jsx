@@ -1,7 +1,25 @@
 import React from "react";
 import styles from "./faqs.module.css";
 import { useState } from "react";
-import Faq from "./Faq";
+
+import "./faq.css";
+
+const FaqTile = ({ faq, index, toggleFAQ }) => {
+  return (
+    <section
+      className={"faq " + (faq.open ? "open" : "")}
+      key={index}
+      onClick={() => toggleFAQ(index)}
+    >
+      <div className={"faq-content"}>
+        <div className="faq-number">{index + 1 + "."}</div>
+        <div className="faq-question">{faq.question}</div>
+      </div>
+      <div className="faq-arrow"></div>
+      <div className="faq-answer">{faq.answer}</div>
+    </section>
+  );
+};
 
 const FAQs = () => {
   const [faqs, setFaqs] = useState([
@@ -59,7 +77,7 @@ const FAQs = () => {
 
       <div className={"faqs"}>
         {faqs.map((faq, index) => (
-          <Faq faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
+          <FaqTile faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
         ))}
       </div>
     </section>

@@ -8,21 +8,20 @@ const Hero = () => {
         16th Mar 2024
       </p>
 
-      <main className="flex h-full w-full -translate-y-[10svh] items-center justify-between gap-10 pl-20 pr-28">
-        <article className="flex flex-col gap-y-6">
+      <main className="flex h-full w-full -translate-y-[10svh] flex-col items-center justify-between gap-10 pl-10 pr-16 lg:flex-row lg:pl-20 lg:pr-28">
+        <article className="flex flex-col gap-y-2 lg:gap-y-6">
           <figure
             aria-label="page-title"
-            className="text-6xl font-bold md:text-7xl"
+            className="grid place-items-center lg:block"
           >
             <img
               src="/assets/title.svg"
               alt="Title"
-              className="h-auto md:w-48 lg:w-96"
+              className="h-auto w-80 md:w-48 lg:w-96"
             />
           </figure>
-          <h2 className="text-md ml-12 border-l-2 border-yellow-500 pl-3 text-justify text-white md:text-lg lg:text-xl">
-            Presenting, one of the biggest
-            <br />
+          <h2 className="text-md text-justify text-white md:text-lg lg:ml-12 lg:border-l-2 lg:border-yellow-500 lg:pl-3 lg:text-xl">
+            Presenting, one of the biggest <br className="hidden lg:block" />
             24-hour Offline Hackathon of ACE
           </h2>
         </article>
@@ -30,7 +29,7 @@ const Hero = () => {
           <img
             src="/assets/astronaut.png"
             alt="astronaut"
-            className="animate-float relative z-10 max-h-[180px] md:max-h-[280px] lg:max-h-[457px]"
+            className="animate-float relative z-10 max-h-[310px] lg:max-h-[457px]"
           />
         </figure>
       </main>
@@ -40,15 +39,15 @@ const Hero = () => {
           <img
             src="/assets/moon_big.svg"
             alt="moon_big"
-            className="absolute -right-6 bottom-0 w-1/2"
+            className="absolute -right-10 bottom-0 w-full lg:w-1/2 "
           />
         </figure>
 
-        <figure className="absolute -bottom-4 right-0">
+        <figure className="absolute -bottom-6 right-0">
           <img src="/assets/bottom_tree.png" alt="bottom_tree_img" />
         </figure>
 
-        <div className="absolute bottom-20 left-[50%] flex h-[10svh] w-full -translate-x-[50%] px-20 text-2xl font-black text-white md:text-3xl lg:text-5xl">
+        <div className="absolute bottom-20 left-[50%] flex h-[6svh] w-full -translate-x-[50%] px-20 text-2xl font-black text-white md:text-3xl lg:h-[10svh] lg:text-5xl">
           <button className="h-full w-full cursor-pointer rounded-l-md border-y-2 border-l-2 bg-transparent">
             DEVFOLIO
           </button>

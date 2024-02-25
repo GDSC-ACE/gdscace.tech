@@ -4,7 +4,7 @@ const Prizes = () => {
   return (
     <section
       id="prizes"
-      className="home-section relative mt-44 h-screen overflow-hidden text-center text-3xl"
+      className="home-section relative mt-44 h-[50svh] overflow-hidden text-center text-3xl lg:h-screen"
     >
       <h2 className="mb-10 inline-block max-w-xs text-2xl text-white">
         Prizes

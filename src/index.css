@@ -51,8 +51,27 @@ body {
 }
 
 .custom-hover-effect:hover {
-  transform: scale(1.5); 
+  transform: scale(1.5);
 }
+
 .custom-hover-effect {
-  transition: transform 0.2s ease; 
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
 }

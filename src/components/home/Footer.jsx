@@ -2,10 +2,10 @@ const Footer = () => {
   return (
     <footer
       id="contacts"
-      className="home-section flex min-h-[100svh] flex-col overflow-hidden"
+      className="home-section flex min-h-[50svh] flex-col overflow-hidden py-6 lg:min-h-[100svh]"
     >
-      <div className="flex flex-1 flex-row">
-        <div className="flex flex-1 flex-col justify-center pl-10">
+      <div className="flex flex-1 flex-col lg:flex-row">
+        <div className="flex flex-col justify-center pb-10 pl-10 lg:flex-1 lg:pb-0">
           <h1 className="font-poppins mb-5 text-base font-semibold text-white lg:text-xl">
             Atharva College of Engineering
           </h1>
@@ -25,18 +25,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-1 items-center justify-center">
-          <div style={{ position: "relative", borderRadius: "20px" }}>
+          <div className="relative rounded-xl">
             <img
               src="assets/dropped_pin.svg"
               alt="earth"
-              height="50px"
-              width="50px"
-              style={{
-                position: "absolute",
-                zIndex: 1,
-                top: "400px",
-                left: "65px",
-              }}
+              className="pointer-events-none absolute left-0 top-full z-0 h-0 w-auto lg:h-12"
             />
             <iframe
               className="mappy rounded"
@@ -54,7 +47,7 @@ const Footer = () => {
       </div>
       <img
         src="assets/footer_earth.png"
-        className="ml-60 mt-[-500px]"
+        className="ml-60 mt-[-500px] hidden lg:block"
         alt="earth"
         height="1013px"
         width="1013px"

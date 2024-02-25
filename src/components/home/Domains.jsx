@@ -18,7 +18,7 @@ const Domains = () => {
       ) {
         // Section is in view
         setUfoPosition({ x: 0, y: 0 });
-        setUfoSize("25%");
+        setUfoSize("20%");
       } else {
         // Section is not in view
         setUfoPosition({ x: 0, y: "100%" });
@@ -35,7 +35,7 @@ const Domains = () => {
 
   useEffect(() => {
     gsap.to(ufoRef.current, {
-      duration: 0.5,
+      duration: 0.25,
       x: ufoPosition.x,
       y: ufoPosition.y,
       width: ufoSize,
@@ -44,16 +44,23 @@ const Domains = () => {
   }, [ufoPosition, ufoSize]);
 
   const handleHover = (event) => {
-    if (event.target === ufoRef.current) return; // Ignore if the UFO is hovered
-    const card = event.target.closest(".domain-card");
+    if (event.target === ufoRef.current) return;
+    const card = event.target;
     const cardRect = card.getBoundingClientRect();
+    const sectionRect = sectionRef.current.getBoundingClientRect();
+    const ufoRect = ufoRef.current.getBoundingClientRect();
     const x =
-      cardRect.left + cardRect.width / 2 - ufoRef.current.offsetWidth / 2;
-    const y = cardRect.top - ufoRef.current.offsetHeight;
+      cardRect.left -
+      sectionRect.left -
+      ufoRef.current.offsetWidth -
+      ufoRect.width / 2;
+    const y = cardRect.top - sectionRect.top - ufoRef.current.offsetHeight;
+
     gsap.to(ufoRef.current, {
-      duration: 0.5,
-      left: x,
-      top: y,
+      duration: 0.25,
+      x: `${x}px`,
+      y: `${y}px`,
+      position: "absolute",
       ease: "power1.out",
     });
     setIsHovered(true);
@@ -62,7 +69,7 @@ const Domains = () => {
 
   const handleMouseOut = (event) => {
     gsap.to(ufoRef.current, {
-      duration: 0.5,
+      duration: 0.25,
       left: "50%",
       top: 0,
       ease: "power1.out",
@@ -73,47 +80,52 @@ const Domains = () => {
   return (
     <section
       id="domains"
-      className="home-section no-scrollbar relative min-h-[30vh] space-y-8 overflow-x-hidden py-24 md:space-y-16 lg:space-y-20"
+      className="home-section no-scrollbar relative grid min-h-[50svh] place-items-center space-y-4 overflow-hidden lg:space-y-8"
       ref={sectionRef}
     >
-      <div className="flex items-center justify-center">
-        <DomainCard
-          onHover={handleHover}
-          onMouseOut={handleMouseOut}
-          domainName="Blockchain"
-          imagePath="/assets/domain/blockchain.svg"
-        />
-        <DomainCard
-          onHover={handleHover}
-          onMouseOut={handleMouseOut}
-          domainName="Web/App"
-          imagePath="/assets/domain/web.svg"
-        />
-        <DomainCard
-          onHover={handleHover}
-          onMouseOut={handleMouseOut}
-          domainName="Social Causes"
-          imagePath="/assets/domain/handshake.svg"
-        />
-      </div>
-      <div className="flex items-center justify-center">
-        <DomainCard
-          onHover={handleHover}
-          onMouseOut={handleMouseOut}
-          domainName="CyberSecurity"
-          imagePath="/assets/domain/padlock.svg"
-        />
-        <DomainCard
-          onHover={handleHover}
-          onMouseOut={handleMouseOut}
-          domainName="Blockchain"
-          imagePath="/assets/domain/blockchain.svg"
-        />
+      <h3 className="mb-9 text-center text-3xl font-bold text-red-50">
+        Domains
+      </h3>
+      <div className="space-y-4 md:space-y-8">
+        <div className="flex items-center justify-center gap-x-4 lg:gap-x-8">
+          <DomainCard
+            onHover={handleHover}
+            onMouseOut={handleMouseOut}
+            domainName="Blockchain"
+            imagePath="/assets/domain/blockchain.svg"
+          />
+          <DomainCard
+            onHover={handleHover}
+            onMouseOut={handleMouseOut}
+            domainName="Web/App"
+            imagePath="/assets/domain/web.svg"
+          />
+          <DomainCard
+            onHover={handleHover}
+            onMouseOut={handleMouseOut}
+            domainName="Social Causes"
+            imagePath="/assets/domain/handshake.svg"
+          />
+        </div>
+        <div className="flex items-center justify-center gap-x-4 md:gap-x-8">
+          <DomainCard
+            onHover={handleHover}
+            onMouseOut={handleMouseOut}
+            domainName="CyberSecurity"
+            imagePath="/assets/domain/padlock.svg"
+          />
+          <DomainCard
+            onHover={handleHover}
+            onMouseOut={handleMouseOut}
+            domainName="Blockchain"
+            imagePath="/assets/domain/blockchain.svg"
+          />
+        </div>
       </div>
       <img
         src="/assets/ufo.png"
         ref={ufoRef}
-        className="pointer-events-none absolute left-[50%] top-0 -translate-x-[50%] transition-all duration-500 ease-in-out"
+        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 transition-all duration-500 ease-in-out"
         alt="UFO"
       />
     </section>

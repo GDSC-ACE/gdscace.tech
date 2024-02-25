@@ -2,6 +2,17 @@ import React, { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 
+import {
+  Home,
+  Info,
+  Globe,
+  Award,
+  Clock,
+  Heart,
+  HelpCircle,
+  Phone,
+} from "lucide-react";
+
 const Sidebar = () => {
   const location = useLocation();
 
@@ -28,7 +39,7 @@ const Sidebar = () => {
   useEffect(() => {
     itemRefs.current = itemRefs.current.slice(0, items.length);
     const selectedItemIndex = items.findIndex(
-      (item) => item.toLowerCase() === selectedItem.toLowerCase(),
+      (item) => item.name.toLowerCase() === selectedItem.toLowerCase(),
     );
     if (itemRefs.current[selectedItemIndex]) {
       const yPos =
@@ -40,18 +51,18 @@ const Sidebar = () => {
   }, [selectedItem]);
 
   const items = [
-    "Home",
-    "About",
-    "Domains",
-    "Prizes",
-    "Timeline",
-    "Sponsors",
-    "FAQs",
-    "Contacts",
+    { name: "Home", icon: <Home /> },
+    { name: "About", icon: <Info /> },
+    { name: "Domains", icon: <Globe /> },
+    { name: "Prizes", icon: <Award /> },
+    { name: "Timeline", icon: <Clock /> },
+    { name: "Sponsors", icon: <Heart /> },
+    { name: "FAQs", icon: <HelpCircle /> },
+    { name: "Contacts", icon: <Phone /> },
   ];
 
   return (
-    <aside ref={sidebarRef} className="fixed top-52 w-[20svh]">
+    <aside ref={sidebarRef} className="fixed top-52 w-[10svh] lg:w-[20svh]">
       <nav className="flex h-full flex-row items-stretch justify-center">
         <div className="relative flex flex-col">
           <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-white"></div>
@@ -68,16 +79,20 @@ const Sidebar = () => {
         <ul className="text-md flex h-full list-none flex-col justify-center gap-y-8 pl-1 font-semibold text-white md:pl-2 lg:pl-3 lg:text-2xl lg:font-semibold">
           {items.map((item, index) => (
             <li
-              key={item}
+              key={item.name}
               ref={(el) => (itemRefs.current[index] = el)}
-              onClick={() => handleItemClick(item, index)}
+              onClick={() => handleItemClick(item.name, index)}
               className={
-                selectedItem.toLowerCase() === item.toLowerCase()
+                selectedItem.toLowerCase() === item.name.toLowerCase()
                   ? "text-yellow-500"
                   : ""
               }
             >
-              <a href={`#${item.toLowerCase()}`}>{item}</a>
+              {window.innerWidth < 1024 ? (
+                <a href={`#${item.name.toLowerCase()}`}>{item.icon}</a>
+              ) : (
+                <a href={`#${item.name.toLowerCase()}`}>{item.name}</a>
+              )}
             </li>
           ))}
         </ul>

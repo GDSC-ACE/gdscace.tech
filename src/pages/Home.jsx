@@ -13,9 +13,10 @@ import Footer from "../components/home/Footer";
 const HomePage = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const homeSectionElements = document.querySelectorAll(".home-section");
 
   useEffect(() => {
+    const homeSectionElements = document.querySelectorAll(".home-section");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,12 +27,13 @@ const HomePage = () => {
       },
       { threshold: 0.7 },
     );
+
     homeSectionElements.forEach((section) => observer.observe(section));
 
     return () => {
       homeSectionElements.forEach((section) => observer.unobserve(section));
     };
-  }, [location.hash]);
+  }, [location.hash, navigate]);
   return (
     <section>
       {/* Sahil & Hrushi */}
