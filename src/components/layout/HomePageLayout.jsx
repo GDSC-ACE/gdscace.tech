@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
@@ -7,7 +8,7 @@ const HomePageLayout = () => {
     <section className="bg-black">
       <Header />
       <Sidebar />
-      <main className="pl-[25svh]">
+      <main className="pl-[20svh]">
         <Outlet />
       </main>
     </section>

@@ -47,7 +47,8 @@ const Domains = () => {
     if (event.target === ufoRef.current) return; // Ignore if the UFO is hovered
     const card = event.target.closest(".domain-card");
     const cardRect = card.getBoundingClientRect();
-    const x = cardRect.left - cardRect.width;
+    const x =
+      cardRect.left + cardRect.width / 2 - ufoRef.current.offsetWidth / 2;
     const y = cardRect.top - ufoRef.current.offsetHeight;
     gsap.to(ufoRef.current, {
       duration: 0.5,
@@ -56,6 +57,7 @@ const Domains = () => {
       ease: "power1.out",
     });
     setIsHovered(true);
+    sectionRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   const handleMouseOut = (event) => {
@@ -71,10 +73,10 @@ const Domains = () => {
   return (
     <section
       id="domains"
-      className="no-scrollbar relative min-h-[30vh] space-y-8 overflow-x-hidden py-24 md:space-y-16 lg:space-y-20"
+      className="home-section no-scrollbar relative min-h-[30vh] space-y-8 overflow-x-hidden py-24 md:space-y-16 lg:space-y-20"
       ref={sectionRef}
     >
-      <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
+      <div className="flex items-center justify-center">
         <DomainCard
           onHover={handleHover}
           onMouseOut={handleMouseOut}

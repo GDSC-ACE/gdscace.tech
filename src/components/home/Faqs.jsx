@@ -52,7 +52,7 @@ const FAQs = () => {
   };
 
   return (
-    <section id={"faqs"} className={styles.section}>
+    <section id={"faqs"} className={`${styles.section} home-section`}>
       <div className={styles.justify}>
         <div className={styles.heading}>FAQ's</div>
       </div>

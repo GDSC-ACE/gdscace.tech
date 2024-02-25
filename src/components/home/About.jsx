@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mx-auto flex min-h-[100svh] max-w-3xl flex-col items-center justify-center lg:max-w-5xl"
+      className="home-section mx-auto flex min-h-[100svh] max-w-3xl flex-col items-center justify-center lg:max-w-5xl"
     >
       <div className="mb-11 flex flex-row items-center justify-center">
         <h1 className="mb-9 text-3xl font-bold text-red-50">About us</h1>

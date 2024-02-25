@@ -1,6 +1,9 @@
 const Hero = () => {
   return (
-    <section className="relative mr-3 flex min-h-[84svh] items-center justify-between overflow-hidden border-r-2 border-yellow-500">
+    <section
+      id="home"
+      className="home-section relative mr-3 flex min-h-[84svh] items-center justify-between overflow-hidden border-r-2 border-yellow-500"
+    >
       <p className="text-md absolute -right-8 top-[40%] rotate-[-90deg] bg-black font-semibold text-white lg:text-lg">
         16th Mar 2024
       </p>

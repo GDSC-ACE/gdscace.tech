@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/all";
 
-import "../../Timeline.css";
+// import "../../Timeline.css";
 import EarthCanvas from "./partials/EarthCanvas";
 
 gsap.registerPlugin(Draggable);
@@ -70,7 +70,7 @@ const Timeline = () => {
       wheel.appendChild(box);
 
       gsap.set(box, {
-        rotation: angle + "_rad",
+        rotation: angle * (180 / Math.PI), // Convert radian to degree
         xPercent: -50,
         yPercent: -50,
         x,
@@ -95,32 +95,31 @@ const Timeline = () => {
   return (
     <section
       id="timeline"
-      className="relative flex h-screen items-center justify-center overflow-hidden"
+      className="home-section relative flex h-screen flex-col items-center overflow-hidden"
     >
-      <h3 className="mb-10 inline-block max-w-xs text-2xl text-white">
+      <h3 className="inline-block max-w-xs pt-10 text-2xl text-white">
         TIMELINE
       </h3>
       <p
         id="title"
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-4xl font-bold text-white"
+        className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white"
       >
-        HELLO
+        Registration
       </p>
-      <div className="star1">
-        <img src="/assets/timeline/celestial.png" alt="" />
-      </div>
-      <div className="star2">
-        <img src="/assets/timeline/celestial2.png" alt="" />
-      </div>
-      <div className="star3">
-        <img src="/assets/timeline/celestial3.png" alt="" />
-      </div>
-      <div className="circular-arc">
-        <img src="/assets/timeline/eclipse.png" alt="" />
-      </div>
-      <div id="wheel" ref={wheelRef}>
+
+      <img
+        src="/assets/timeline/ellipse.png"
+        alt="Ellipse"
+        className="absolute right-0 top-1/2 h-[400px] -translate-y-1/2 transform md:h-[600px]"
+      />
+
+      <div
+        id="wheel"
+        ref={wheelRef}
+        className="absolute left-full top-1/2 h-full -translate-y-1/2 rounded-full"
+      >
         <img
-          class="astro"
+          className="astro h-24 w-24 border-none"
           src="/assets/timeline/rocket.png"
           alt="Rocket Scroll"
         />

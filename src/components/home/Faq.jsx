@@ -3,7 +3,7 @@ import "./faq.css";
 
 const Faq = ({ faq, index, toggleFAQ }) => {
   return (
-    <container
+    <section
       className={"faq " + (faq.open ? "open" : "")}
       key={index}
       onClick={() => toggleFAQ(index)}
@@ -14,7 +14,7 @@ const Faq = ({ faq, index, toggleFAQ }) => {
       </div>
       <div className="faq-arrow"></div>
       <div className="faq-answer">{faq.answer}</div>
-    </container>
+    </section>
   );
 };
 

@@ -22,7 +22,7 @@ const PrizeCard = ({ imgSrc, prizeAmount, altText, className }) => {
           src={"/assets/prizes/rocks.png"}
           alt="rock"
         />
-        <small className="m-0 text-lg text-yellow-300">
+        <small className="m-0 text-lg text-yellow-300 lg:text-2xl">
           &#8377; {prizeAmount}
         </small>
       </p>

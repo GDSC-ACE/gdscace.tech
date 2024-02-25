@@ -1,11 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 
 const Sidebar = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const location = useLocation();
+
+  const [selectedItem, setSelectedItem] = useState("home");
   const rocketRef = useRef(null);
   const sidebarRef = useRef(null);
   const itemRefs = useRef([]);
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+
+    setSelectedItem(hash || "home");
+  }, [location.hash]);
 
   const handleItemClick = (item, index) => {
     setSelectedItem(item);
@@ -17,15 +26,18 @@ const Sidebar = () => {
   };
 
   useEffect(() => {
-    itemRefs.current = itemRefs.current.slice(0, 8);
-    if (itemRefs.current[0]) {
+    itemRefs.current = itemRefs.current.slice(0, items.length);
+    const selectedItemIndex = items.findIndex(
+      (item) => item.toLowerCase() === selectedItem.toLowerCase(),
+    );
+    if (itemRefs.current[selectedItemIndex]) {
       const yPos =
-        itemRefs.current[0].getBoundingClientRect().top -
+        itemRefs.current[selectedItemIndex].getBoundingClientRect().top -
         sidebarRef.current.getBoundingClientRect().top -
         rocketRef.current.getBoundingClientRect().height / 2;
-      gsap.set(rocketRef.current, { y: yPos });
+      gsap.to(rocketRef.current, { y: yPos, duration: 1, ease: "power1.out" });
     }
-  }, []);
+  }, [selectedItem]);
 
   const items = [
     "Home",
@@ -39,7 +51,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside ref={sidebarRef} className="fixed top-52 w-[25svh]">
+    <aside ref={sidebarRef} className="fixed top-52 w-[20svh]">
       <nav className="flex h-full flex-row items-stretch justify-center">
         <div className="relative flex flex-col">
           <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-white"></div>
@@ -53,13 +65,17 @@ const Sidebar = () => {
             />
           </div>
         </div>
-        <ul className="text-md flex h-full list-none flex-col justify-center gap-y-8 pl-12 font-semibold text-white lg:text-2xl lg:font-semibold">
+        <ul className="text-md flex h-full list-none flex-col justify-center gap-y-8 pl-1 font-semibold text-white md:pl-2 lg:pl-3 lg:text-2xl lg:font-semibold">
           {items.map((item, index) => (
             <li
               key={item}
               ref={(el) => (itemRefs.current[index] = el)}
               onClick={() => handleItemClick(item, index)}
-              className={selectedItem === item ? "text-yellow-500" : ""}
+              className={
+                selectedItem.toLowerCase() === item.toLowerCase()
+                  ? "text-yellow-500"
+                  : ""
+              }
             >
               <a href={`#${item.toLowerCase()}`}>{item}</a>
             </li>

@@ -2,10 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header
-      id="home"
-      className="m-3 mb-0 flex items-start justify-center border-r-2 border-t-2 border-yellow-500 px-16 py-8 md:justify-between"
-    >
+    <header className="m-3 mb-0 flex items-start justify-center border-r-2 border-t-2 border-yellow-500 px-16 py-8 md:justify-between">
       <figure className="flex items-start">
         <div className="flex items-start">
           <img src="/assets/logo.svg" alt="logo" />

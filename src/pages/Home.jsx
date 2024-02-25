@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import Hero from "../components/home/Hero";
 import About from "../components/home/About";
@@ -10,6 +11,27 @@ import Faqs from "../components/home/Faqs";
 import Footer from "../components/home/Footer";
 
 const HomePage = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const homeSectionElements = document.querySelectorAll(".home-section");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navigate(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.7 },
+    );
+    homeSectionElements.forEach((section) => observer.observe(section));
+
+    return () => {
+      homeSectionElements.forEach((section) => observer.unobserve(section));
+    };
+  }, [location.hash]);
   return (
     <section>
       {/* Sahil & Hrushi */}
