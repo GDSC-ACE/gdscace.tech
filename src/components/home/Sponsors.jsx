@@ -13,19 +13,19 @@ const Sponsors = () => {
       <div className="grid grid-cols-2 place-items-center gap-5 md:grid-cols-3 md:gap-6 lg:gap-9">
         <SponsorCard
           sponsorName="Tinder"
-          imagePath="/assets/sponsor/tinder.svg"
+          imagePath="/assets/sponsor/devfolio.png"
         />
         <SponsorCard
           sponsorName="Sponsor2"
-          imagePath="/assets/sponsor/tinder.svg"
+          imagePath="/assets/sponsor/polygon.jpg"
         />
         <SponsorCard
           sponsorName="Sponsor3"
-          imagePath="/assets/sponsor/tinder.svg"
+          imagePath="/assets/sponsor/ethindia.svg"
         />
         <SponsorCard
           sponsorName="Sponsor4"
-          imagePath="/assets/sponsor/tinder.svg"
+          imagePath="/assets/sponsor/replit.png"
         />
         <SponsorCard
           sponsorName="Sponsor5"

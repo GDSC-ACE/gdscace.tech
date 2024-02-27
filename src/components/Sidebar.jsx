@@ -67,12 +67,15 @@ const Sidebar = () => {
         <div className="relative flex flex-col">
           <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-white"></div>
           <div ref={rocketRef} className="flex flex-col items-center">
-            <img src="/fire.png" alt="Fire" className="left-7 top-0 h-5 w-5" />
             <img
-              src="/rocket image.png"
+              src="/fire.png"
+              alt="Fire"
+              className="left-7 top-0 h-auto w-4 lg:w-5"
+            />
+            <img
+              src="/rocket.png"
               alt="rocket"
-              className="h-11 w-11"
-              style={{ transform: "rotate(134deg)" }}
+              className="h-auto w-11 lg:w-16"
             />
           </div>
         </div>
