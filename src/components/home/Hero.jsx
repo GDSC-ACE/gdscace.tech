@@ -1,8 +1,11 @@
+import { useRef } from "react";
+
 const Hero = () => {
+  const devfolioRef = useRef(null);
   return (
     <section
       id="home"
-      className="home-section relative mr-3 flex min-h-[84svh] items-center justify-between overflow-hidden border-r-2 border-yellow-500"
+      className="home-section relative flex min-h-[84svh] items-center justify-between overflow-hidden"
     >
       <p className="text-md absolute -right-8 top-[40%] rotate-[-90deg] bg-black font-semibold text-white lg:text-lg">
         16th Mar 2024
@@ -47,14 +50,28 @@ const Hero = () => {
           <img src="/assets/bottom_tree.png" alt="bottom_tree_img" />
         </figure>
 
-        <div className="absolute bottom-20 left-[50%] flex h-[6svh] w-full -translate-x-[50%] px-10 text-xl font-black text-white md:text-3xl lg:h-[10svh] lg:px-20 lg:text-5xl">
-          <button className="h-full w-full cursor-pointer rounded-l-md border-y-2 border-l-2 bg-transparent">
+        <div
+          ref={devfolioRef}
+          class="apply-button"
+          data-hackathon-slug="ACE_Hacks"
+          data-button-theme="light"
+        ></div>
+
+        <button
+          onClick={() => {
+            if (devfolioRef.current) {
+              devfolioRef.current.click();
+            }
+          }}
+          className="absolute bottom-20 left-[50%] flex h-[6svh] w-full -translate-x-[50%] items-center justify-between px-10 text-xl font-black text-white md:text-3xl lg:h-[10svh] lg:px-20 lg:text-5xl"
+        >
+          <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-l-md border-y-2 border-l-2 bg-transparent">
             DEVFOLIO
-          </button>
-          <button className="h-full w-full cursor-pointer rounded-r-md border-y-2 border-r-2 bg-yellow-500/75">
+          </span>
+          <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-r-md border-y-2 border-r-2 bg-yellow-500/75">
             REGISTER NOW
-          </button>
-        </div>
+          </span>
+        </button>
       </footer>
     </section>
   );
