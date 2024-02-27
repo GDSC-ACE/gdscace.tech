@@ -53,7 +53,7 @@ const Hero = () => {
         <div
           ref={devfolioRef}
           class="apply-button"
-          data-hackathon-slug="ACE_Hacks"
+          data-hackathon-slug="ace-hacks"
           data-button-theme="light"
         ></div>
 
