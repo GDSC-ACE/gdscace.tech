@@ -12,20 +12,24 @@ const Sponsors = () => {
 
       <div className="grid grid-cols-2 place-items-center gap-5 md:grid-cols-3 md:gap-6 lg:gap-9">
         <SponsorCard
-          sponsorName="Tinder"
+          sponsorName="Devfolio"
           imagePath="/assets/sponsor/devfolio.png"
+          altText="DEVFOLIO LOGO"
         />
         <SponsorCard
-          sponsorName="Sponsor2"
+          sponsorName="Polygon"
           imagePath="/assets/sponsor/polygon.jpg"
+          altText="POLYGON LOGO"
         />
         <SponsorCard
-          sponsorName="Sponsor3"
+          sponsorName="ETHIndia"
           imagePath="/assets/sponsor/ethindia.svg"
+          altText="ETHINDIA LOGO"
         />
         <SponsorCard
-          sponsorName="Sponsor4"
+          sponsorName="Replit"
           imagePath="/assets/sponsor/replit.png"
+          altText={"REPLIT LOGO"}
         />
         <SponsorCard
           sponsorName="Sponsor5"

@@ -3,7 +3,7 @@ import React from "react";
 const DomainCard = ({ domainName, imagePath, onHover, onMouseOut }) => {
   return (
     <div
-      className="domain-card m-2 flex flex-col rounded-lg border-2 border-stone-200 px-4 py-2 sm:min-w-[100px] md:min-w-[180px] lg:h-64 lg:w-64 lg:min-w-[250px] lg:px-10 lg:py-6"
+      className="m-2 flex flex-col rounded-lg border-2 border-stone-200 px-4 py-2 sm:min-w-[100px] md:min-w-[180px] lg:h-64 lg:w-64 lg:min-w-[250px] lg:px-10 lg:py-6"
       onMouseEnter={onHover}
       onMouseLeave={onMouseOut}
     >

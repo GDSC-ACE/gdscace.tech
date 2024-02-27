@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer
       id="contacts"
-      className="home-section flex min-h-[50svh] flex-col overflow-hidden max-lg:py-6 lg:min-h-[100svh]"
+      className="home-section relative flex min-h-[50svh] flex-col overflow-hidden max-lg:py-6 lg:min-h-[100svh]"
     >
       <div className="flex flex-1 flex-col lg:flex-row">
         <div className="flex flex-col justify-center pb-10 pl-10 lg:flex-1 lg:pb-0">
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-1 items-center justify-center">
-          <div className="relative rounded-xl">
+          <div className="relative z-10 rounded-xl">
             <img
               src="assets/dropped_pin.svg"
               alt="earth"
@@ -47,10 +47,8 @@ const Footer = () => {
       </div>
       <img
         src="assets/footer_earth.png"
-        className="ml-60 mt-[-500px] hidden lg:block"
+        className="absolute bottom-0 right-0 z-0"
         alt="earth"
-        height="1013px"
-        width="1013px"
       />
     </footer>
   );
