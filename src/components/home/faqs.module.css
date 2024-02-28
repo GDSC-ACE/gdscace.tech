@@ -46,7 +46,7 @@
 
 .number {
     color: #FFF;
-    font-family: Puritan;
+    font-family: 'Arial';
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -61,7 +61,7 @@
 .question {
     flex-shrink: 1;
     color: #FFF;
-    font-family: 'Puritan';
+    font-family: 'Arial';
     font-size: 22px;
     font-style: normal;
     font-weight: 400;

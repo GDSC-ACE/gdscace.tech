@@ -7,7 +7,7 @@ const DomainCard = ({ domainName, imagePath, onHover, onMouseOut }) => {
       onMouseEnter={onHover}
       onMouseLeave={onMouseOut}
     >
-      <h2 className="mb-10 mt-2 text-center text-base text-white md:text-xl lg:mt-5 lg:text-3xl">
+      <h2 className="mb-4 mt-2 text-center text-base text-white md:text-xl lg:mt-5 lg:text-3xl">
         {domainName}
       </h2>
       <img

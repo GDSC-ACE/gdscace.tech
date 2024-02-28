@@ -24,7 +24,7 @@
 
   transition: all 0.4s ease;
   color: white;
-  font-family: 'Puritan';
+  font-family: 'Arial';
 
   font-style: normal;
   font-weight: 800;
@@ -41,7 +41,7 @@
 
   transition: all 0.4s ease;
   color: #FFF;
-  font-family: 'Puritan';
+  font-family: 'Arial';
 
   font-style: normal;
   font-weight: 400;
@@ -70,7 +70,7 @@
   overflow: hidden;
   transition: all 0.2s ease;
   color: #FFF;
-  font-family: 'Puritan';
+  font-family: 'Arial';
 
   font-style: normal;
   font-weight: 400;

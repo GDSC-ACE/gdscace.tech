@@ -139,7 +139,7 @@ const Domains = () => {
           <DomainCard
             onHover={handleHover}
             onMouseOut={handleMouseOut}
-            domainName="Social Causes"
+            domainName="Social Cause"
             imagePath="/assets/domain/handshake.svg"
           />
         </div>
@@ -147,7 +147,7 @@ const Domains = () => {
           <DomainCard
             onHover={handleHover}
             onMouseOut={handleMouseOut}
-            domainName="CyberSecurity"
+            domainName="Cyber Security"
             imagePath="/assets/domain/padlock.svg"
           />
           <DomainCard
