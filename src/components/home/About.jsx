@@ -1,12 +1,13 @@
+import SectionHeader from "../SectionHeader";
+
 const About = () => {
   return (
     <section
       id="about"
-      className="home-section mx-auto flex min-h-[50svh] max-w-3xl flex-col items-center justify-center lg:min-h-[100svh] lg:max-w-5xl"
+      className="home-section mx-auto flex min-h-[100svh] max-w-3xl flex-col items-center justify-center lg:max-w-5xl"
     >
-      <div className="mb-11 flex flex-row items-center justify-center">
-        <h1 className="mb-9 text-3xl font-bold text-red-50">About us</h1>
-      </div>
+      <SectionHeader headerText="About" />
+
       <div className="px-9 text-justify text-lg lg:text-xl">
         <p className="mb-5 text-center text-white">
           Presenting ACE IEEE Techithon's Hack Mania, one of the biggest 24-Hour

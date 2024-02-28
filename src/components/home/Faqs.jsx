@@ -3,6 +3,7 @@ import styles from "./faqs.module.css";
 import { useState } from "react";
 
 import "./faq.css";
+import SectionHeader from "../SectionHeader";
 
 const FaqTile = ({ faq, index, toggleFAQ }) => {
   return (
@@ -70,10 +71,8 @@ const FAQs = () => {
   };
 
   return (
-    <section id={"faqs"} className={`${styles.section} home-section`}>
-      <div className={styles.justify}>
-        <div className={styles.heading}>FAQ's</div>
-      </div>
+    <section id={"faqs"} className={`home-section ${styles.section}`}>
+      <SectionHeader headerText={"FAQs"} />
 
       <div className={"faqs"}>
         {faqs.map((faq, index) => (

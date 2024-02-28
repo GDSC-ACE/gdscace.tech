@@ -4,12 +4,12 @@ const PrizeCard = ({ imgSrc, prizeAmount, altText, className }) => {
   return (
     <figure
       className={twMerge(
-        `absolute transform space-x-4 transition-transform duration-300 ease-in-out hover:scale-110`,
+        "absolute transform space-x-4 transition-transform duration-300 ease-in-out hover:scale-110",
         className,
       )}
     >
-      <img className="h-48 w-48 object-contain" src={imgSrc} alt={altText} />
-      <div className="absolute left-[40%] top-[40%] -translate-x-1/2 -translate-y-1/2 -rotate-45 transform text-4xl font-bold text-white">
+      <img className="h-40 w-40 object-contain" src={imgSrc} alt={altText} />
+      <div className="absolute left-[40%] top-[40%] -translate-x-1/2 -translate-y-1/2 -rotate-45 transform text-5xl font-bold text-white">
         {altText}
       </div>
       <p className="flex -rotate-45 items-center justify-center">
@@ -18,7 +18,7 @@ const PrizeCard = ({ imgSrc, prizeAmount, altText, className }) => {
           src={"/assets/prizes/rocks.png"}
           alt="rock"
         />
-        <small className="m-0 text-2xl text-yellow-300">
+        <small className="m-0 text-xl text-yellow-300 md:text-2xl lg:text-3xl">
           &#8377; {prizeAmount}
         </small>
       </p>

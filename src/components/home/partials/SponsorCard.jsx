@@ -6,7 +6,7 @@ const SponsorCard = ({ sponsorName, altText, imagePath }) => {
       <figure className="relative z-10 flex h-32 w-32 items-center justify-center overflow-hidden lg:h-60 lg:w-60">
         <img
           src={imagePath}
-          className="custom-hover-effect z-10 h-20 rounded-full object-cover sm:h-28 lg:h-40"
+          className="custom-hover-effect z-10 h-20 rounded-full bg-black object-cover sm:h-28 lg:h-40"
           alt={altText || sponsorName}
         />
 

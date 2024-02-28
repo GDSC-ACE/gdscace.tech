@@ -2,6 +2,7 @@ import { useRef } from "react";
 
 const Hero = () => {
   const devfolioRef = useRef(null);
+
   return (
     <section
       id="home"
@@ -50,13 +51,6 @@ const Hero = () => {
           <img src="/assets/bottom_tree.png" alt="bottom_tree_img" />
         </figure>
 
-        <div
-          ref={devfolioRef}
-          class="apply-button"
-          data-hackathon-slug="ace-hacks"
-          data-button-theme="light"
-        ></div>
-
         <button
           onClick={() => {
             if (devfolioRef.current) {
@@ -72,6 +66,14 @@ const Hero = () => {
             REGISTER NOW
           </span>
         </button>
+        <div className="absolute bottom-0 left-0">
+          <div
+            ref={devfolioRef}
+            className="apply-button relative -z-50 h-0 w-0"
+            data-hackathon-slug="ace-hacks"
+            data-button-theme="light"
+          ></div>
+        </div>
       </footer>
     </section>
   );

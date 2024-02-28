@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import Hero from "../components/home/Hero";
@@ -25,7 +25,7 @@ const HomePage = () => {
           }
         });
       },
-      { threshold: 0.7 },
+      { threshold: 1 },
     );
 
     homeSectionElements.forEach((section) => observer.observe(section));
@@ -35,16 +35,6 @@ const HomePage = () => {
     };
   }, [location.hash, navigate]);
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://apply.devfolio.co/v2/sdk.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
   return (
     <section>
       {/* Sahil & Hrushi */}

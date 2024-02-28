@@ -33,6 +33,7 @@ body {
   }
 }
 
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -58,9 +59,20 @@ body {
   transition: transform 0.2s ease;
 }
 
+.home-section {
+  display: grid;
+  place-content: center;
+  padding-top: 5svh;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 90%;
+  }
+
+
+  .home-section {
+    padding-top: 15svh;
   }
 }
 

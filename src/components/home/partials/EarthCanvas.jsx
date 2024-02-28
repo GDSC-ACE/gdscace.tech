@@ -16,7 +16,7 @@ function Timeline() {
         shading: "lambert",
         light: {
           ambient: {
-            intensity: 0.5,
+            intensity: 0.75,
           },
           displacementQuality: "ultra",
           main: {

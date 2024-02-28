@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
       <img
         src="assets/footer_earth.png"
-        className="absolute bottom-0 right-0 z-0"
+        className="absolute bottom-0 right-0 z-0 hidden lg:block"
         alt="earth"
       />
     </footer>

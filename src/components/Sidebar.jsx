@@ -62,7 +62,10 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside ref={sidebarRef} className="fixed top-52 w-[10svh] lg:w-[20svh]">
+    <aside
+      ref={sidebarRef}
+      className="fixed top-1/2 w-[10svh] -translate-y-1/2 lg:w-[20svh]"
+    >
       <nav className="flex h-full flex-row items-stretch justify-center">
         <div className="relative flex flex-col">
           <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-white"></div>
@@ -75,11 +78,11 @@ const Sidebar = () => {
             <img
               src="/rocket.png"
               alt="rocket"
-              className="h-auto w-11 lg:w-16"
+              className="h-auto w-14 lg:w-16"
             />
           </div>
         </div>
-        <ul className="text-md flex h-full list-none flex-col justify-center gap-y-16 pl-1  font-semibold text-white md:pl-2 lg:gap-y-8 lg:pl-3 lg:text-2xl lg:font-semibold">
+        <ul className="text-md flex h-full list-none flex-col justify-center gap-y-16  font-semibold text-white md:pl-1 lg:gap-y-8 lg:pl-3 lg:text-2xl lg:font-semibold">
           {items.map((item, index) => (
             <li
               key={item.name}

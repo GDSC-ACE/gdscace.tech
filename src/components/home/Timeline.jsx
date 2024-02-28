@@ -4,6 +4,7 @@ import { Draggable } from "gsap/all";
 
 // import "../../Timeline.css";
 import EarthCanvas from "./partials/EarthCanvas";
+import SectionHeader from "../SectionHeader";
 
 gsap.registerPlugin(Draggable);
 
@@ -12,10 +13,10 @@ const Timeline = () => {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    // GSAP animation logic
     const wheel = wheelRef.current;
 
-    gsap.set(imageRef.current, { rotation: "-60" });
+    gsap.set(imageRef.current, { rotation: "-50" });
+    gsap.set(wheel, { rotation: "40" });
 
     const style = window.getComputedStyle(wheel);
     const border = parseInt(style.getPropertyValue("border-width"));
@@ -45,13 +46,12 @@ const Timeline = () => {
     ];
 
     let titleIndex = 0;
-    let lastTitleUpdateRotation = -20;
     let lastRotation = 0;
 
     Draggable.create(wheel, {
       type: "rotation",
       throwProps: true,
-      bounds: { minRotation: 0, maxRotation: -180 },
+      bounds: { minRotation: 0, maxRotation: -140 },
       minimumMovement: 10,
       onDrag: function () {
         rotateImageBasedOnDragDirection(this.rotation);
@@ -94,33 +94,32 @@ const Timeline = () => {
       });
     }
 
+    const rotationSegment = 360 / titles.length;
+
     function updateTitleOnRotation(rotation) {
       const normalizedRotation = ((rotation % 360) + 360) % 360;
-      const rotationDifference = Math.abs(
-        normalizedRotation - lastTitleUpdateRotation,
-      );
+      const currentSegment = Math.floor(normalizedRotation / rotationSegment);
 
-      if (rotationDifference >= 20) {
-        document.getElementById("title").textContent = titles[titleIndex];
-        titleIndex = (titleIndex + 1) % titles.length;
-        lastTitleUpdateRotation = normalizedRotation;
+      if (currentSegment !== titleIndex) {
+        document.getElementById("title").textContent = titles[currentSegment];
+        titleIndex = currentSegment;
       }
     }
-  }, []); // Empty dependency array to ensure the effect runs once on mount
-
+  }, []);
   return (
     <section
       id="timeline"
-      className="home-section relative flex h-[60svh] flex-col items-center overflow-hidden lg:h-screen"
+      className="home-section relative flex h-screen flex-col items-center overflow-hidden"
     >
-      <h3 className="inline-block max-w-xs pt-10 text-2xl text-white">
-        TIMELINE
-      </h3>
+      <SectionHeader
+        headerText={"Timeline"}
+        className="absolute left-1/2 top-10 -translate-x-1/2"
+      />
       <p
         id="title"
         className="absolute inset-0 z-40 flex items-center justify-center text-4xl font-bold text-white"
       >
-        Registration
+        1PM &gt; Assembly
       </p>
       <img
         src="/assets/timeline/ellipse.png"
@@ -135,7 +134,7 @@ const Timeline = () => {
       <img
         src="/assets/timeline/celestial2.png"
         alt="Star"
-        className="absolute right-1/3 top-1/4 scale-50"
+        className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[25%]"
       />
       <img
         src="/assets/timeline/celestial3.png"
