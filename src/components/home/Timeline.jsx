@@ -15,8 +15,8 @@ const Timeline = () => {
   useEffect(() => {
     const wheel = wheelRef.current;
 
-    gsap.set(imageRef.current, { rotation: "-50" });
-    gsap.set(wheel, { rotation: "40" });
+    gsap.set(imageRef.current, { rotation: "-60" }); // Adjust the initial rotation
+    gsap.set(wheel, { rotation: "30" }); // Adjust the initial rotation
 
     const style = window.getComputedStyle(wheel);
     const border = parseInt(style.getPropertyValue("border-width"));
@@ -61,6 +61,28 @@ const Timeline = () => {
         rotateImageBasedOnDragDirection(this.rotation);
         updateTitleOnRotation(this.endRotation);
       },
+    });
+
+    const draggable = Draggable.create(wheel, {
+      type: "rotation",
+      throwProps: true,
+      bounds: { minRotation: 0, maxRotation: -120 }, // Adjust the bounds
+      minimumMovement: 10,
+      onDrag: function () {
+        rotateImageBasedOnDragDirection(this.rotation);
+        updateTitleOnRotation(this.endRotation);
+      },
+      onThrowUpdate: function () {
+        rotateImageBasedOnDragDirection(this.rotation);
+        updateTitleOnRotation(this.endRotation);
+      },
+    })[0];
+  
+    // Stop dragging when the mouse is out of the window
+    window.addEventListener('mouseout', (event) => {
+      if (!event.relatedTarget && !event.toElement) {
+        draggable.endDrag();
+      }
     });
 
     function rotateImageBasedOnDragDirection(currentRotation) {
