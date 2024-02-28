@@ -71,7 +71,7 @@ const Sidebar = () => {
           <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-white"></div>
           <div ref={rocketRef} className="flex flex-col items-center">
             <img
-              src="/fire.png"
+              src="/Fire.png"
               alt="Fire"
               className="left-7 top-0 h-auto w-4 lg:w-5"
             />
