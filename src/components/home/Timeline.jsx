@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/all";
 
-// import "../../Timeline.css";
 import EarthCanvas from "./partials/EarthCanvas";
 import SectionHeader from "../SectionHeader";
 
@@ -37,12 +36,20 @@ const Timeline = () => {
     }
 
     const titles = [
-      "1PM ->Assembly",
-      "The Journey Begins",
-      "Into the Unknown",
-      "A New Chapter",
-      "Uncharted Territories",
-      "Beyond the Horizon",
+      "1",
+      "1",
+      "dummy",
+      "dummy",
+      "dummy",
+      "dummy",
+      "dummy",
+      "dummy",
+      "6",
+      "5",
+      "4",
+      "3",
+      "2",
+      
     ];
 
     let titleIndex = 0;
@@ -51,8 +58,8 @@ const Timeline = () => {
     Draggable.create(wheel, {
       type: "rotation",
       throwProps: true,
-      bounds: { minRotation: 0, maxRotation: -140 },
-      minimumMovement: 10,
+      bounds: { minRotation: 30, maxRotation: -130 },
+      minimumMovement: 1, // Reduce this value to make the drag start more easily
       onDrag: function () {
         rotateImageBasedOnDragDirection(this.rotation);
         updateTitleOnRotation(this.endRotation);
@@ -61,28 +68,6 @@ const Timeline = () => {
         rotateImageBasedOnDragDirection(this.rotation);
         updateTitleOnRotation(this.endRotation);
       },
-    });
-
-    const draggable = Draggable.create(wheel, {
-      type: "rotation",
-      throwProps: true,
-      bounds: { minRotation: 0, maxRotation: -120 }, // Adjust the bounds
-      minimumMovement: 10,
-      onDrag: function () {
-        rotateImageBasedOnDragDirection(this.rotation);
-        updateTitleOnRotation(this.endRotation);
-      },
-      onThrowUpdate: function () {
-        rotateImageBasedOnDragDirection(this.rotation);
-        updateTitleOnRotation(this.endRotation);
-      },
-    })[0];
-  
-    // Stop dragging when the mouse is out of the window
-    window.addEventListener('mouseout', (event) => {
-      if (!event.relatedTarget && !event.toElement) {
-        draggable.endDrag();
-      }
     });
 
     function rotateImageBasedOnDragDirection(currentRotation) {
@@ -128,6 +113,7 @@ const Timeline = () => {
       }
     }
   }, []);
+
   return (
     <section
       id="timeline"

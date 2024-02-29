@@ -25,7 +25,7 @@ const HomePage = () => {
           }
         });
       },
-      { threshold: 0.5 }, // or { threshold: 0 }
+      { threshold: 0.75 }, // or { threshold: 0 }
     );
 
     homeSectionElements.forEach((section) => observer.observe(section));
