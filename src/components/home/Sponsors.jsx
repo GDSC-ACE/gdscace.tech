@@ -26,6 +26,11 @@ const Sponsors = () => {
           altText="ETHINDIA LOGO"
         />
         <SponsorCard
+          sponsorName="echo3D"
+          imagePath="/assets/sponsor/echo3d.jpg"
+          altText="echo3D LOGO"
+        />
+        <SponsorCard
           sponsorName="Wolfram"
           imagePath="/assets/sponsor/wolfram.png"
           altText="WOLFRAM LOGO"
