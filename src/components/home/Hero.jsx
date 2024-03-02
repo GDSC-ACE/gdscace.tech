@@ -53,9 +53,7 @@ const Hero = () => {
 
         <button
           onClick={() => {
-            if (devfolioRef.current) {
-              devfolioRef.current.click();
-            }
+            window.location.href = "https://ace-hacks-1.devfolio.co/";
           }}
           className="absolute bottom-20 left-[50%] flex h-[6svh] w-full -translate-x-[50%] items-center justify-between px-10 text-xl font-black text-white md:text-3xl lg:h-[10svh] lg:px-20 lg:text-5xl"
         >
