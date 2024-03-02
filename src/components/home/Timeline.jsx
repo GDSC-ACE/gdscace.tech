@@ -36,19 +36,19 @@ const Timeline = () => {
     }
 
     const titles = [
-      "1",
-      "1",
+      "Coming Soon!",
+      "Coming Soon!",
       "dummy",
       "dummy",
       "dummy",
       "dummy",
       "dummy",
       "dummy",
-      "6",
-      "5",
-      "4",
-      "3",
-      "2",
+      "Coming Soon! Pt 6 ",
+      "Coming Soon! Pt 5",
+      "Coming Soon! Pt 4",
+      "Coming Soon! Pt 3",
+      "Coming Soon! Pt 2",
       
     ];
 
@@ -127,7 +127,7 @@ const Timeline = () => {
         id="title"
         className="absolute inset-0 z-40 flex items-center justify-center text-4xl font-bold text-white"
       >
-        1PM &gt; Assembly
+        Coming Soon!
       </p>
       <img
         src="/assets/timeline/ellipse.png"
