@@ -27,13 +27,13 @@ const FAQs = () => {
     {
       question: "What would be the mode of the hackathon?",
       answer:
-        "Hackmania will be conducted in an hybrid format. The event will be hosted both at Atharva College of Engineering in Malad West, Mumbai, and online on Discord.",
+        "AceHacks will be conducted in an offline format. The event will be hosted at Atharva College of Engineering in Malad West, Mumbai.",
       open: true,
     },
     {
       question: "What if I have never been in a hackathon before?",
       answer:
-        "Hackmania aims to give beginners a headstart by providing them mentors who are from the industry to guide them. So that they can learn while brainstorming ideas. We've called for mentors 👨🏻‍🏫 from Industry to help you and also judge your projects . So, first timers don't have to worry as their lack of experience won't be an issue in their road to victory . Plus, there is always a first time for everything ! We promise you a fun and fruitful experience.",
+        "AceHacks aims to give beginners a headstart by providing them mentors who are from the industry to guide them. So that they can learn while brainstorming ideas. We've called for mentors 👨🏻‍🏫 from Industry to help you and also judge your projects . So, first timers don't have to worry as their lack of experience won't be an issue in their road to victory . Plus, there is always a first time for everything ! We promise you a fun and fruitful experience.",
       open: false,
     },
     {
