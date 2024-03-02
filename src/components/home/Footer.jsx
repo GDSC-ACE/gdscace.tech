@@ -17,10 +17,10 @@ const Footer = () => {
             <br />
             <br />
             <p className="font-poppins text-sm font-semibold text-white lg:text-base">
-              Email Us :
+              Email Us : gdscace@gmail.com
             </p>
             <p className="font-poppins text-sm font-semibold text-white lg:text-base">
-              Contact Us :
+              Contact Us : +91 9326194769
             </p>
           </div>
         </div>
