@@ -16,13 +16,13 @@ const Prizes = () => {
         <div className="absolute left-1/2 top-1/2 h-[90%] w-[90%] -translate-x-1/2 -translate-y-1/2 rounded-ellipse border-2 border-gray-900"></div>
         <PrizeCard
           imgSrc={"/assets/prizes/planet3.png"}
-          prizeAmount={50000}
+          prizeAmount={25000}
           altText="1st"
           className="left-0 top-0 -translate-x-1/4 translate-y-1/2"
         />
         <PrizeCard
           imgSrc={"/assets/prizes/planet1.png"}
-          prizeAmount={25000}
+          prizeAmount={15000}
           altText="2nd"
           className="left-1/4 top-0 -translate-y-1/4 translate-x-1/2"
         />
