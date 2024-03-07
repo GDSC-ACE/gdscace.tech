@@ -36,19 +36,37 @@ const Timeline = () => {
     }
 
     const titles = [
-      "Coming Soon!",
-      "Coming Soon!",
+      "10:00 AM - Inaugration",
+      "10:00 AM - Inaugration",
+      "10:00 AM - Inaugration",
+      "11:00 AM - Coding Commences",
       "dummy",
       "dummy",
       "dummy",
       "dummy",
       "dummy",
       "dummy",
-      "Coming Soon! Pt 6 ",
-      "Coming Soon! Pt 5",
-      "Coming Soon! Pt 4",
-      "Coming Soon! Pt 3",
-      "Coming Soon! Pt 2",
+      "dummy",
+      "dummy",
+      "dummy9",
+      "dummy8",
+      "dummy7",
+      "dummy6",
+      "dummy5",
+      "dummy4",
+      "dummy3",
+      "dummy2",
+      "3:30 PM - Winner Announcement",
+      "1:00 PM - Final Presentation",
+      "12:45 PM - Team Shortlisting",
+      "11:30 AM - Judging Round 1 ",
+      "11:00 AM - Coding Ends",
+      "9:00 AM - Breakfast",
+      "10:00 PM - Mentoring Round 2",
+      "8:30 PM - Dinner ",
+      "6:00 PM - Internal Mentoring",
+      "2:00 PM - Lunch",
+      "1:00 PM - Mentoring Round 1",
       
     ];
 
@@ -101,11 +119,15 @@ const Timeline = () => {
       });
     }
 
+    
     const rotationSegment = 360 / titles.length;
 
     function updateTitleOnRotation(rotation) {
       const normalizedRotation = ((rotation % 360) + 360) % 360;
       const currentSegment = Math.floor(normalizedRotation / rotationSegment);
+
+      if (titles[currentSegment] === "dummy2") return;
+
 
       if (currentSegment !== titleIndex) {
         document.getElementById("title").textContent = titles[currentSegment];
@@ -127,7 +149,7 @@ const Timeline = () => {
         id="title"
         className="absolute inset-0 z-40 flex items-center justify-center text-4xl font-bold text-white"
       >
-        Coming Soon!
+        10:00 AM - Inaugration
       </p>
       <img
         src="/assets/timeline/ellipse.png"
