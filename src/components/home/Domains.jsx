@@ -153,8 +153,8 @@ const Domains = () => {
           <DomainCard
             onHover={handleHover}
             onMouseOut={handleMouseOut}
-            domainName="Blockchain"
-            imagePath="/assets/domain/blockchain.svg"
+            domainName="AI/ML"
+            imagePath="/assets/domain/AI.svg"
           />
         </div>
       </div>
