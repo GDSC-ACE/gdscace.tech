@@ -1,7 +1,11 @@
 import React from "react";
 
-const SponsorCard = ({ sponsorName, altText, imagePath }) => {
+const SponsorCard = ({ sponsorName, imagePath, altText, websiteUrl }) => {
+  const handleClick = () => {
+    window.open(websiteUrl, "_blank");
+  };
   return (
+    <div onClick={handleClick} className="cursor-pointer">
     <div className="relative m-2 flex flex-col items-center">
       <figure className="relative z-10 flex h-32 w-32 items-center justify-center overflow-hidden lg:h-60 lg:w-60">
         <img
@@ -19,6 +23,7 @@ const SponsorCard = ({ sponsorName, altText, imagePath }) => {
       <h2 className="mb-4 mt-4 text-center text-base text-white md:text-lg lg:text-xl">
         {sponsorName}
       </h2>
+    </div>
     </div>
   );
 };
