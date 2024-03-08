@@ -22,7 +22,7 @@ const Sponsors = () => {
         />
         <SponsorCard
           sponsorName="ETHIndia"
-          imagePath="/assets/sponsor/ethindia.svg"
+          imagePath="/assets/sponsor/ethindia.png"
           altText="ETHINDIA LOGO"
         />
         <SponsorCard
@@ -37,8 +37,13 @@ const Sponsors = () => {
         />
         <SponsorCard
           sponsorName="XYZ"
-          imagePath="/assets/sponsor/xyz.svg"
+          imagePath="/assets/sponsor/xyz.png"
           altText="XYZ LOGO"
+        />
+        <SponsorCard
+          sponsorName="FeelGood"
+          imagePath="/assets/sponsor/feelgood.png"
+          altText="FEELGOOD LOGO"
         />
       </div>
     </section>
