@@ -10,7 +10,7 @@ const About = () => {
 
       <div className="px-9 text-justify text-lg lg:text-xl">
         <p className="mb-5 text-center text-white">
-          Presenting GDSC-ACE x CSI's AceHacks, one of the biggest 24-Hour
+          Presenting GDSC-ACE x CSI's Ace Hacks, the biggest 24-Hour
           Offline Hackathon of ACE.
         </p>
         <p className="mb-5 text-center text-white">
