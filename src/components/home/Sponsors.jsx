@@ -52,6 +52,18 @@ const Sponsors = () => {
           altText="FEELGOOD LOGO"
           websiteUrl="https://www.feelgoodeco.in/"
         />
+        <SponsorCard
+          sponsorName="GeeksForGeeks"
+          imagePath="/assets/sponsor/GFG.jpg"
+          altText="GFG LOGO"
+          websiteUrl="https://www.geeksforgeeks.org/"
+        />
+        <SponsorCard
+          sponsorName="Admit Abroad - Vidyalankar"
+          imagePath="/assets/sponsor/admit_abroad.png"
+          altText="Admit Abroad LOGO"
+          websiteUrl="https://admitabroad.com/"
+        />
       </div>
     </section>
   );
